@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GrowMore.iml" filepath="$PROJECT_DIR$/GrowMore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/growmore-analyst-service/growmore-analyst-service.iml" filepath="$PROJECT_DIR$/growmore-analyst-service/growmore-analyst-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/growmore-eureka-server/growmore-eureka-server.iml" filepath="$PROJECT_DIR$/growmore-eureka-server/growmore-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/growmore-farmer-service/growmore-farmer-service.iml" filepath="$PROJECT_DIR$/growmore-farmer-service/growmore-farmer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/growmore-problem-service/growmore-problem-service.iml" filepath="$PROJECT_DIR$/growmore-problem-service/growmore-problem-service.iml" />
+    </modules>
+  </component>
+</project>
