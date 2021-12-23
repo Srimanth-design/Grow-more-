@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GrowMore.iml" filepath="$PROJECT_DIR$/GrowMore.iml" />
       <module fileurl="file://$PROJECT_DIR$/growmore-analyst-service/growmore-analyst-service.iml" filepath="$PROJECT_DIR$/growmore-analyst-service/growmore-analyst-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/growmore-configuration-server/growmore-configuration-server.iml" filepath="$PROJECT_DIR$/growmore-configuration-server/growmore-configuration-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/growmore-eureka-server/growmore-eureka-server.iml" filepath="$PROJECT_DIR$/growmore-eureka-server/growmore-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/growmore-farmer-service/growmore-farmer-service.iml" filepath="$PROJECT_DIR$/growmore-farmer-service/growmore-farmer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/growmore-gateway-api/growmore-gateway-api.iml" filepath="$PROJECT_DIR$/growmore-gateway-api/growmore-gateway-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/growmore-problem-service/growmore-problem-service.iml" filepath="$PROJECT_DIR$/growmore-problem-service/growmore-problem-service.iml" />
     </modules>
   </component>

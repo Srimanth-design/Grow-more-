@@ -1,5 +1,6 @@
 package com.growmore.service;
 
+import com.growmore.exception.FarmerNotFoundException;
 import com.growmore.model.Farmer;
 import com.growmore.repository.IFarmerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FarmerServiceImpl implements IFarmerService{
+public class FarmerServiceImpl implements IFarmerService {
 
     IFarmerRepository farmerRepository;
 
@@ -33,18 +34,29 @@ public class FarmerServiceImpl implements IFarmerService{
     }
 
     @Override
-    public Farmer getByGender(String gender) {
-        return farmerRepository.getByGender(gender);
+    public List<Farmer> getByGender(String gender)  throws FarmerNotFoundException {
+        List<Farmer> farmers = farmerRepository.getByGender(gender);
+        if(farmers.isEmpty()){
+            throw new FarmerNotFoundException("Gender not found");
+
+        }
+        return farmers;
     }
 
     @Override
-    public List<Farmer> getByAge(int age) {
-        return farmerRepository.getByAge(age);
+    public List<Farmer> getByAge(int age)  throws FarmerNotFoundException {
+        List<Farmer> farmers = farmerRepository.getByAge(age);
+        if(farmers.isEmpty()){
+            throw new FarmerNotFoundException("Age error");
+        }
+        return farmers;
     }
 
     @Override
-    public Farmer getById(int farmerId) {
-        return farmerRepository.findById(farmerId).get();
+    public Farmer getById(int farmerId)  throws FarmerNotFoundException{
+        return farmerRepository.findById(farmerId).orElseThrow(()->{
+           throw new FarmerNotFoundException("Invalid id");
+        });
     }
 
     @Override
@@ -53,7 +65,11 @@ public class FarmerServiceImpl implements IFarmerService{
     }
 
     @Override
-    public List<Farmer> getBySoilCity(String soil, String city) {
-        return farmerRepository.getBySoilCity(soil, city);
+    public List<Farmer> getBySoilCity(String soil, String city)  throws FarmerNotFoundException{
+        List<Farmer> farmers =  farmerRepository.getBySoilCity(soil, city);
+        if(farmers.isEmpty()){
+            throw new FarmerNotFoundException("soil and city error");
+        }
+        return farmers;
     }
 }

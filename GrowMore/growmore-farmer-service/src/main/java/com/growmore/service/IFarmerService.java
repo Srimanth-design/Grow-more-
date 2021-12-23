@@ -1,5 +1,6 @@
 package com.growmore.service;
 
+import com.growmore.exception.FarmerNotFoundException;
 import com.growmore.model.Farmer;
 import org.springframework.data.jpa.repository.Query;
 
@@ -13,15 +14,15 @@ public interface IFarmerService {
 
     void deleteFarmer(int farmerId);
 
-    Farmer getByGender(String gender);
+    List<Farmer> getByGender(String gender) throws FarmerNotFoundException;
 
-    List<Farmer> getByAge(int age);
+    List<Farmer> getByAge(int age) throws FarmerNotFoundException;
 
-    Farmer getById(int farmerId);
+    Farmer getById(int farmerId) throws FarmerNotFoundException;
 
     List<Farmer> getAll();
 
-    List<Farmer> getBySoilCity(String soil, String city);
+    List<Farmer> getBySoilCity(String soil, String city) throws FarmerNotFoundException;
 
 
 }

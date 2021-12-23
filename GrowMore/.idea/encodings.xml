@@ -2,11 +2,15 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/growmore-analyst-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/growmore-configuration-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/growmore-configuration-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growmore-eureka-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growmore-eureka-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growmore-eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growmore-eureka-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growmore-farmer-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/growmore-gateway-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/growmore-gateway-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growmore-problem-service/src/main/java" charset="UTF-8" />
   </component>
 </project>

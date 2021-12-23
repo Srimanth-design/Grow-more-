@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/growmore-problem-service/pom.xml" />
         <option value="$PROJECT_DIR$/growmore-analyst-service/pom.xml" />
         <option value="$PROJECT_DIR$/growmore-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/growmore-configuration-server/pom.xml" />
+        <option value="$PROJECT_DIR$/growmore-gateway-api/pom.xml" />
       </list>
     </option>
   </component>

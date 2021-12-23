@@ -1,0 +1,26 @@
+
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761
+
+#  declarative properties for routes
+#each route has an id, uri, predicates(path), filters
+
+# http://localhost:9000/mobile-api/mobiles
+# http://localhost:9000/mobile-api/mobiles/brand/Samsung
+# http://localhost:9000/cart-api/cart/show
+
+
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: mobileService
+#          uri: lb://MOBILE-SERVICE
+#          predicates:
+#            - Path=/mobile-api/**
+#        - id: cartService
+#          uri: lb://CART-SERVICE
+#          predicates:
+#            - Path=/cart-api/**
