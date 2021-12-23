@@ -5,6 +5,8 @@ import com.growmore.repository.IFarmerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FarmerServiceImpl implements IFarmerService{
 
@@ -33,5 +35,25 @@ public class FarmerServiceImpl implements IFarmerService{
     @Override
     public Farmer getByGender(String gender) {
         return farmerRepository.getByGender(gender);
+    }
+
+    @Override
+    public List<Farmer> getByAge(int age) {
+        return farmerRepository.getByAge(age);
+    }
+
+    @Override
+    public Farmer getById(int farmerId) {
+        return farmerRepository.findById(farmerId).get();
+    }
+
+    @Override
+    public List<Farmer> getAll() {
+        return farmerRepository.findAll();
+    }
+
+    @Override
+    public List<Farmer> getBySoilCity(String soil, String city) {
+        return farmerRepository.getBySoilCity(soil, city);
     }
 }
