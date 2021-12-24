@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="growmore-analyst-service" />
+        <module name="growmore-farmer-service" />
+        <module name="growmore-eureka-server" />
+        <module name="growmore-gateway-api" />
+        <module name="growmore-configuration-server" />
+        <module name="growmore-problem-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="growmore-analyst-service" target="11" />
+      <module name="growmore-configuration-server" target="11" />
+      <module name="growmore-eureka-registry" target="11" />
+      <module name="growmore-eureka-server" target="11" />
+      <module name="growmore-farmer-service" target="11" />
+      <module name="growmore-gateway-api" target="11" />
+      <module name="growmore-problem-service" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="growmore-analyst-service" options="-parameters" />
+      <module name="growmore-configuration-server" options="-parameters" />
+      <module name="growmore-eureka-registry" options="-parameters" />
+      <module name="growmore-eureka-server" options="-parameters" />
+      <module name="growmore-farmer-service" options="-parameters" />
+      <module name="growmore-gateway-api" options="-parameters" />
+      <module name="growmore-problem-service" options="-parameters" />
+    </option>
+  </component>
+</project>
