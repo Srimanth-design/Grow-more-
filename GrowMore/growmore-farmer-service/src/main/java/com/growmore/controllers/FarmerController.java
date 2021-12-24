@@ -59,4 +59,11 @@ public class FarmerController {
     List<Farmer> getBySoilCity(@PathVariable("soil") String soil, @PathVariable("city") String city) throws FarmerNotFoundException{
         return farmerService.getBySoilCity(soil, city);
     }
+
+    @GetMapping("/farmers/soil/{soil}")
+    List<Farmer> getBySoil(@PathVariable("soil") String soil) throws FarmerNotFoundException{
+        return  farmerService.getBySoil(soil);
+    }
+
+
 }
