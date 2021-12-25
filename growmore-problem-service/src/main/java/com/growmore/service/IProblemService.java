@@ -1,6 +1,9 @@
 package com.growmore.service;
 
 
+import com.growmore.exception.ProblemNotFoundException;
+import com.growmore.model.Fertilizers;
+import com.growmore.model.Intensity;
 import com.growmore.model.Problem;
 
 import java.util.List;
@@ -12,9 +15,13 @@ public interface IProblemService {
 
     void deleteProblem(int problemId);
 
-    Problem getById(int problemId);
+    Problem getById(int problemId) throws ProblemNotFoundException;
 
     List<Problem> getAll();
 
-    List<Problem> getByIntensity(String intensity);
+    List<Problem> getByIntensity(String intensity) throws ProblemNotFoundException;
+
+    List<Problem> getByFertilizer(String fertilizer) throws  ProblemNotFoundException;
+
+    List<Problem> getByFertAlter(String fertilizer, String alternative) throws ProblemNotFoundException;
 }

@@ -1,10 +1,13 @@
 package com.growmore.controllers;
-
 import com.growmore.exception.FarmerNotFoundException;
 import com.growmore.model.Farmer;
 import com.growmore.service.IFarmerService;
-import lombok.Getter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,56 +16,136 @@ import java.util.List;
 @RequestMapping("/farmer-api")
 public class FarmerController {
 
+    private Logger logger = LoggerFactory.getLogger(FarmerController.class);
     IFarmerService farmerService;
+
+    /**
+     * @param farmerService
+     */
 
     @Autowired
     public void setFarmerService(IFarmerService farmerService) {
         this.farmerService = farmerService;
     }
 
+    /**
+     * @param farmer
+     * @return
+     */
     @PostMapping("/farmers")
-    Farmer addFarmer(@RequestBody Farmer farmer) {
-        return farmerService.addFarmer(farmer);
+    ResponseEntity<Farmer> addFarmer(@RequestBody Farmer farmer) {
+        Farmer addFarmer = farmerService.addFarmer(farmer);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "New farmer addded");
+        return ResponseEntity.accepted().headers(headers).body(addFarmer);
     }
 
+    /**
+     * @param farmer
+     */
     @PutMapping("/farmers")
-    void updateFarmer(@RequestBody Farmer farmer) {
+    ResponseEntity<Void> updateFarmer(@RequestBody Farmer farmer) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "updating..");
         farmerService.updateFarmer(farmer);
+        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).build();
     }
 
+    /**
+     * @param farmerId
+     */
     @DeleteMapping("/farmers/farmerId/{farmerId}")
-    void deleteFarmer(@PathVariable("farmerId") int farmerId) {
+    ResponseEntity<Void> deleteFarmer(@PathVariable("farmerId") int farmerId) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "deleting..");
         farmerService.deleteFarmer(farmerId);
+        return ResponseEntity.ok().headers(headers).build();
     }
 
+    /**
+     * @param gender
+     * @return
+     * @throws FarmerNotFoundException
+     */
     @GetMapping("/farmers/gender/{gender}")
-    List<Farmer> getByGender(@PathVariable("gender") String gender) throws FarmerNotFoundException {
-        return farmerService.getByGender(gender);
+    ResponseEntity<List<Farmer>> getByGender(@PathVariable("gender") String gender) throws FarmerNotFoundException {
+        logger.debug("Get by gender:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "gender");
+        List<Farmer> farmers = farmerService.getByGender(gender);
+        logger.info("Got farmer details by gender: " + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+    /**
+     * @param age
+     * @return
+     * @throws FarmerNotFoundException
+     */
     @GetMapping("/farmers/age/{age}")
-    List<Farmer> getByAge(@PathVariable("age") int age) throws FarmerNotFoundException{
-        return farmerService.getByAge(age);
+    ResponseEntity<List<Farmer>> getByAge(@PathVariable("age") int age) throws FarmerNotFoundException {
+        logger.debug("Get farmer by age:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "age");
+        List<Farmer> farmers = farmerService.getByAge(age);
+        logger.info("Got farmer details by age :" + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+    /**
+     * @param farmerId
+     * @return
+     * @throws FarmerNotFoundException
+     */
     @GetMapping("/farmers/farmerId/{farmerId}")
-    Farmer getById(@PathVariable("farmerId") int farmerId) throws FarmerNotFoundException{
-        return farmerService.getById(farmerId);
+    ResponseEntity<Farmer> getById(@PathVariable("farmerId") int farmerId) throws FarmerNotFoundException {
+        logger.debug("Getting by Id.. using method");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "farmer Id");
+        Farmer farmer = farmerService.getById(farmerId);
+        logger.info("Got farmer details by Id:" + farmer);
+        return ResponseEntity.accepted().headers(headers).body(farmer);
+
     }
 
     @GetMapping("/farmers")
-    List<Farmer> getAll(){
-        return farmerService.getAll();
+    ResponseEntity<List<Farmer>> getAll() {
+        List<Farmer> farmers = farmerService.getAll();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "showing all farmers  ");
+        return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+    /**
+     * @param soil
+     * @param city
+     * @return
+     * @throws FarmerNotFoundException
+     */
     @GetMapping("/farmers/soil/{soil}/city/{city}")
-    List<Farmer> getBySoilCity(@PathVariable("soil") String soil, @PathVariable("city") String city) throws FarmerNotFoundException{
-        return farmerService.getBySoilCity(soil, city);
+    ResponseEntity<List<Farmer>> getBySoilCity(@PathVariable("soil") String soil, @PathVariable("city") String city) throws FarmerNotFoundException {
+        logger.debug("Get farmer by soil and city inputs:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by soil and city inputs");
+        List<Farmer> farmers = farmerService.getBySoilCity(soil, city);
+        logger.info("Got farmer details by soil and city :" + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
     }
+
+    /**
+     * @param soil
+     * @return
+     * @throws FarmerNotFoundException
+     */
 
     @GetMapping("/farmers/soil/{soil}")
-    List<Farmer> getBySoil(@PathVariable("soil") String soil) throws FarmerNotFoundException{
-        return  farmerService.getBySoil(soil);
+    ResponseEntity<List<Farmer>> getBySoil(@PathVariable("soil") String soil) throws FarmerNotFoundException {
+        logger.debug("Get farmer by soil inputs:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by soil inputs");
+        List<Farmer> farmers = farmerService.getBySoil(soil);
+        logger.info("Got farmer details by soil :" + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
 

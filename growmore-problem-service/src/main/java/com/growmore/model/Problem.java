@@ -31,10 +31,12 @@ public class Problem {
 
     @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinTable(name = "problem_solution", joinColumns = @JoinColumn(name = "problemid"), inverseJoinColumns = @JoinColumn(name = "solutionid"))
+    @ToString.Exclude
     private Set<Solution> solutions;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="analystid")
+
     private Analyst analyst;
 
     public Problem(String problem, Intensity intensity, String affectedAreaImg, Fertilizers fertilizers, Set<Solution> solutions, Analyst analyst) {
