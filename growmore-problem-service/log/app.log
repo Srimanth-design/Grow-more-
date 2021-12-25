@@ -25,3 +25,377 @@
 2021-12-25 01:24:35.190  INFO 16260 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 12.647 seconds (JVM running for 14.292)
 2021-12-25 01:24:45.970  INFO 16260 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-12-25 01:24:45.974  INFO 16260 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-12-25 02:36:12.795  WARN 16260 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 02:36:12.807  WARN 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 02:36:16.874  WARN 16260 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 02:36:16.883 ERROR 16260 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROBLEM-SERVICE/PROBLEM-SERVICE:4662021b-72c8-4312-a760-c3e822164931 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 02:36:16.904  WARN 16260 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 02:36:22.373  INFO 16260 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-25 02:36:22.679  INFO 16260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 02:36:26.459  WARN 16260 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 02:36:26.462  WARN 16260 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROBLEM-SERVICE/PROBLEM-SERVICE:4662021b-72c8-4312-a760-c3e822164931 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 02:36:26.465  WARN 16260 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 02:36:29.831  WARN 16260 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 02:36:29.837 ERROR 16260 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROBLEM-SERVICE/PROBLEM-SERVICE:4662021b-72c8-4312-a760-c3e822164931 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:196) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:189) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:137) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:106) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 03:04:52.487  INFO 14256 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 14256 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-25 03:04:52.492 DEBUG 14256 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-25 03:04:52.494  INFO 14256 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-25 03:04:52.564  INFO 14256 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-25 03:04:52.564  INFO 14256 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=90a771724c6774a24059a561524e0bb432a9ab08, state=null
+2021-12-25 03:04:52.566  INFO 14256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 03:04:52.567  INFO 14256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 03:04:54.326  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-25 03:04:54.683  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 341 ms. Found 1 JPA repository interfaces.
+2021-12-25 03:04:55.199  INFO 14256 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-25 03:04:56.596  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-25 03:04:56.868  INFO 14256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4300 ms
+2021-12-25 03:04:57.043  WARN 14256 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:05:00.225  INFO 14256 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:05:01.213  WARN 14256 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:05:01.296  WARN 14256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-25 03:05:02.482  WARN 14256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-25 03:05:02.853  INFO 14256 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-25 03:05:03.047  WARN 14256 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-25 03:05:03.067  INFO 14256 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-25 03:05:03.143  INFO 14256 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-25 03:05:04.388  INFO 14256 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-25 03:05:04.460  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-25 03:05:04.461  INFO 14256 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-25 03:05:04.888  INFO 14256 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 14.727 seconds (JVM running for 16.637)
+2021-12-25 03:05:16.420  INFO 14256 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 03:05:16.425  INFO 14256 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-12-25 03:05:29.091 DEBUG 14256 --- [http-nio-8082-exec-4] c.g.controllers.ProblemController        : Getting by Id.. using method
+2021-12-25 03:05:29.142  INFO 14256 --- [http-nio-8082-exec-4] c.g.controllers.ProblemController        : Got farmer problem details by Id:Problem(problemId=200, problem=Less yeild, intensity=LOW, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=BONIDE, analyst=Analyst(analystId=300, name=Dr.Rohan, gender=Male, degree=Horticulture, experience=28, rating=3.0))
+2021-12-25 03:14:37.681  INFO 14256 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-25 03:14:37.913  INFO 14256 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:14:52.681  INFO 11724 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 11724 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-25 03:14:52.685 DEBUG 11724 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-25 03:14:52.685  INFO 11724 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-25 03:14:52.812  INFO 11724 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-25 03:14:52.812  INFO 11724 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=90a771724c6774a24059a561524e0bb432a9ab08, state=null
+2021-12-25 03:14:52.814  INFO 11724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 03:14:52.815  INFO 11724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 03:14:55.063  INFO 11724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-25 03:14:55.406  INFO 11724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 331 ms. Found 1 JPA repository interfaces.
+2021-12-25 03:14:56.011  INFO 11724 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-25 03:14:57.566  INFO 11724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-25 03:14:57.829  INFO 11724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5014 ms
+2021-12-25 03:14:57.983  WARN 11724 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:15:01.359  INFO 11724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:15:02.197  WARN 11724 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:15:02.278  WARN 11724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-25 03:15:03.427  WARN 11724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-25 03:15:03.816  INFO 11724 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-25 03:15:04.005  WARN 11724 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-25 03:15:04.023  INFO 11724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-25 03:15:04.093  INFO 11724 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-25 03:15:05.361  INFO 11724 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-25 03:15:05.400  INFO 11724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-25 03:15:05.401  INFO 11724 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-25 03:15:05.820  INFO 11724 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 15.617 seconds (JVM running for 18.004)
+2021-12-25 03:15:06.080  INFO 11724 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 03:15:06.083  INFO 11724 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-25 03:15:54.627  INFO 11724 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-25 03:15:54.839  INFO 11724 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:16:08.441  INFO 11112 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 11112 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-25 03:16:08.444 DEBUG 11112 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-25 03:16:08.444  INFO 11112 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-25 03:16:08.525  INFO 11112 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-25 03:16:08.525  INFO 11112 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=90a771724c6774a24059a561524e0bb432a9ab08, state=null
+2021-12-25 03:16:08.527  INFO 11112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 03:16:08.528  INFO 11112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 03:16:10.320  INFO 11112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-25 03:16:10.640  INFO 11112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 300 ms. Found 1 JPA repository interfaces.
+2021-12-25 03:16:11.159  INFO 11112 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-25 03:16:12.549  INFO 11112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-25 03:16:12.774  INFO 11112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4245 ms
+2021-12-25 03:16:12.940  WARN 11112 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:16:15.847  INFO 11112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:16:16.801  WARN 11112 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:16:16.931  WARN 11112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-25 03:16:18.612  WARN 11112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-25 03:16:19.112  INFO 11112 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-25 03:16:19.477  WARN 11112 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-25 03:16:19.508  INFO 11112 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-25 03:16:19.590  INFO 11112 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-25 03:16:21.418  INFO 11112 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-25 03:16:21.482  INFO 11112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-25 03:16:21.485  INFO 11112 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-25 03:16:22.059  INFO 11112 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 16.183 seconds (JVM running for 18.205)
+2021-12-25 03:16:51.777  INFO 11112 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 03:16:51.781  INFO 11112 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-12-25 03:17:59.954  INFO 11112 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-25 03:18:00.179  INFO 11112 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:18:13.273  INFO 3408 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 3408 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-25 03:18:13.283 DEBUG 3408 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-25 03:18:13.283  INFO 3408 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-25 03:18:13.378  INFO 3408 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-25 03:18:13.378  INFO 3408 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=90a771724c6774a24059a561524e0bb432a9ab08, state=null
+2021-12-25 03:18:13.383  INFO 3408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 03:18:13.384  INFO 3408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 03:18:15.383  INFO 3408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-25 03:18:15.739  INFO 3408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 342 ms. Found 1 JPA repository interfaces.
+2021-12-25 03:18:16.265  INFO 3408 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-25 03:18:17.691  INFO 3408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-25 03:18:17.928  INFO 3408 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4543 ms
+2021-12-25 03:18:18.093  WARN 3408 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:18:21.241  INFO 3408 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 03:18:22.080  WARN 3408 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 03:18:22.166  WARN 3408 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-25 03:18:23.379  WARN 3408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-25 03:18:23.730  INFO 3408 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-25 03:18:23.919  WARN 3408 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-25 03:18:23.935  INFO 3408 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-25 03:18:24.008  INFO 3408 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-25 03:18:25.309  INFO 3408 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-25 03:18:25.351  INFO 3408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-25 03:18:25.355  INFO 3408 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-25 03:18:25.728  INFO 3408 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 15.401 seconds (JVM running for 17.377)
+2021-12-25 03:18:29.694  INFO 3408 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 03:18:29.697  INFO 3408 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-25 04:11:56.635  INFO 3408 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-25 04:11:56.964  INFO 3408 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 04:12:00.026  WARN 3408 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2021-12-25 04:12:00.026  WARN 3408 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2021-12-25 04:12:00.708  WARN 3408 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:02.177  WARN 3408 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:02.332  WARN 3408 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:04.123  WARN 3408 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:04.821  WARN 3408 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:04.828  WARN 3408 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROBLEM-SERVICE/PROBLEM-SERVICE:deedbf64-ff1d-4dfc-bef3-33918d0235fa - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 04:12:04.830  WARN 3408 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 04:12:06.283  WARN 3408 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:06.285 ERROR 3408 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROBLEM-SERVICE/PROBLEM-SERVICE:deedbf64-ff1d-4dfc-bef3-33918d0235fa - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 04:12:06.439  WARN 3408 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:08.228  WARN 3408 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-25 04:12:08.233 ERROR 3408 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROBLEM-SERVICE/PROBLEM-SERVICE:deedbf64-ff1d-4dfc-bef3-33918d0235fa - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:196) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:189) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:137) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:106) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-25 04:54:55.091  INFO 7576 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 7576 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-25 04:54:55.099 DEBUG 7576 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-25 04:54:55.100  INFO 7576 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-25 04:54:55.365  INFO 7576 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-25 04:54:55.367  INFO 7576 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=90a771724c6774a24059a561524e0bb432a9ab08, state=null
+2021-12-25 04:54:55.370  INFO 7576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 04:54:55.371  INFO 7576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 04:54:59.992  INFO 7576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-25 04:55:00.678  INFO 7576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 659 ms. Found 1 JPA repository interfaces.
+2021-12-25 04:55:02.893  INFO 7576 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-25 04:55:06.353  INFO 7576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-25 04:55:06.938  INFO 7576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11565 ms
+2021-12-25 04:55:07.138  WARN 7576 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 04:55:14.338  INFO 7576 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 04:55:17.462  WARN 7576 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 04:55:18.848  WARN 7576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-25 04:55:22.619  WARN 7576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-25 04:55:23.295  INFO 7576 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-25 04:55:23.948  WARN 7576 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-25 04:55:23.974  INFO 7576 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-25 04:55:24.109  INFO 7576 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-25 04:55:26.703  INFO 7576 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-25 04:55:26.988  INFO 7576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-25 04:55:26.990  INFO 7576 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-25 04:55:27.704  INFO 7576 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 37.648 seconds (JVM running for 40.701)
+2021-12-25 04:56:05.796  INFO 7576 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 04:56:05.799  INFO 7576 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-25 04:58:35.649  INFO 7576 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-25 04:58:35.865  INFO 7576 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 04:58:47.236  INFO 13652 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 13652 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-25 04:58:47.240 DEBUG 13652 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-25 04:58:47.241  INFO 13652 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-25 04:58:47.351  INFO 13652 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-25 04:58:47.352  INFO 13652 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=90a771724c6774a24059a561524e0bb432a9ab08, state=null
+2021-12-25 04:58:47.354  INFO 13652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-25 04:58:47.354  INFO 13652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-25 04:58:49.565  INFO 13652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-25 04:58:49.956  INFO 13652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 374 ms. Found 1 JPA repository interfaces.
+2021-12-25 04:58:50.668  INFO 13652 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-25 04:58:52.301  INFO 13652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-25 04:58:52.561  INFO 13652 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5206 ms
+2021-12-25 04:58:52.726  WARN 13652 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 04:58:56.397  INFO 13652 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-25 04:58:57.519  WARN 13652 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-25 04:58:57.697  WARN 13652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-25 04:58:59.245  WARN 13652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-25 04:58:59.798  INFO 13652 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-25 04:59:00.000  WARN 13652 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-25 04:59:00.024  INFO 13652 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-25 04:59:00.131  INFO 13652 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-25 04:59:01.825  INFO 13652 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-25 04:59:01.976  INFO 13652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-25 04:59:01.977  INFO 13652 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-25 04:59:02.954  INFO 13652 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 18.463 seconds (JVM running for 20.745)
+2021-12-25 04:59:33.485  INFO 13652 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-25 04:59:33.487  INFO 13652 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-25 05:38:04.765 DEBUG 13652 --- [http-nio-8082-exec-9] c.g.controllers.ProblemController        : Get farmer by problem intensity inputs:
+2021-12-25 05:38:04.826  INFO 13652 --- [http-nio-8082-exec-9] c.g.controllers.ProblemController        : Got farmer details by intensity of the problem :[Problem(problemId=203, problem=Leaf damage, intensity=HIGH, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=EUROCHEM, analyst=Analyst(analystId=303, name=Ramya, gender=Female, degree=B.S.C Agriculture, experience=10, rating=4.0))]
+2021-12-25 05:38:51.958 DEBUG 13652 --- [http-nio-8082-exec-10] c.g.controllers.ProblemController        : Get farmer by problem intensity inputs:
+2021-12-25 05:38:51.972  INFO 13652 --- [http-nio-8082-exec-10] c.g.controllers.ProblemController        : Got farmer details by intensity of the problem :[Problem(problemId=200, problem=Less yeild, intensity=LOW, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=BONIDE, analyst=Analyst(analystId=300, name=Dr.Rohan, gender=Male, degree=Horticulture, experience=28, rating=3.0)), Problem(problemId=201, problem=Bugs and insects, intensity=LOW, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=NITREX, analyst=Analyst(analystId=301, name=DR.Sigmon, gender=Male, degree=B.S.C Agriculture, experience=30, rating=4.5))]
+2021-12-25 05:45:55.172 DEBUG 13652 --- [http-nio-8082-exec-2] c.g.controllers.ProblemController        : Getting by Id.. using method
+2021-12-25 05:45:55.184  INFO 13652 --- [http-nio-8082-exec-2] c.g.controllers.ProblemController        : Got farmer problem details by Id:Problem(problemId=200, problem=Less yeild, intensity=LOW, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=BONIDE, analyst=Analyst(analystId=300, name=Dr.Rohan, gender=Male, degree=Horticulture, experience=28, rating=3.0))

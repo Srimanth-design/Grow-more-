@@ -1,6 +1,8 @@
 package com.growmore.controllers;
 import com.growmore.exception.FarmerNotFoundException;
+import com.growmore.feign.IProblemFeign;
 import com.growmore.model.Farmer;
+import com.growmore.model.Problem;
 import com.growmore.service.IFarmerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +21,9 @@ public class FarmerController {
     private Logger logger = LoggerFactory.getLogger(FarmerController.class);
     IFarmerService farmerService;
 
+    @Autowired
+    IProblemFeign problemFeign;
+
     /**
      * @param farmerService
      */
@@ -27,6 +32,8 @@ public class FarmerController {
     public void setFarmerService(IFarmerService farmerService) {
         this.farmerService = farmerService;
     }
+
+
 
     /**
      * @param farmer
@@ -39,6 +46,8 @@ public class FarmerController {
         headers.add("desc", "New farmer addded");
         return ResponseEntity.accepted().headers(headers).body(addFarmer);
     }
+
+
 
     /**
      * @param farmer
@@ -116,6 +125,7 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+
     /**
      * @param soil
      * @param city
@@ -145,6 +155,24 @@ public class FarmerController {
         headers.add("desc", "getting by soil inputs");
         List<Farmer> farmers = farmerService.getBySoil(soil);
         logger.info("Got farmer details by soil :" + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
+    }
+
+    @GetMapping("/farmers/problems")
+    ResponseEntity<List<Problem>> getAllPro(){
+        List<Problem> problems = problemFeign.getAllPro();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "showing all farmer problems  ");
+        return ResponseEntity.ok().headers(headers).body(problems);
+    }
+
+    @GetMapping("farmers/problems/intensity/{intensity}")
+    ResponseEntity<List<Problem>> getByIntensity(@PathVariable("intensity") String intensity){
+        logger.debug("Get farmer details by problem intensity details:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by problem and farmer inputs");
+        List<Problem> farmers = problemFeign.getByIntensity(intensity);
+        logger.info("Got farmer details by problem intensity :" + farmers);
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 

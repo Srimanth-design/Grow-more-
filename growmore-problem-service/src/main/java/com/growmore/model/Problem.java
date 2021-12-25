@@ -10,8 +10,7 @@ import java.util.Set;
 
 
 
-@Setter
-@Getter
+
 @ToString
 @NoArgsConstructor
 @Entity
@@ -35,6 +34,7 @@ public class Problem {
     private Set<Solution> solutions;
 
     @OneToOne(cascade = CascadeType.ALL)
+
     @JoinColumn(name="analystid")
 
     private Analyst analyst;
@@ -47,4 +47,54 @@ public class Problem {
         this.solutions = solutions;
         this.analyst = analyst;
     }
+
+    public Integer getProblemId() {
+        return problemId;
+    }
+
+    public void setProblemId(Integer problemId) {
+        this.problemId = problemId;
+    }
+
+    public String getProblem() {
+        return problem;
+    }
+
+    public void setProblem(String problem) {
+        this.problem = problem;
+    }
+
+    public Intensity getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(Intensity intensity) {
+        this.intensity = intensity;
+    }
+
+    public String getAffectedAreaImg() {
+        return affectedAreaImg;
+    }
+
+    public void setAffectedAreaImg(String affectedAreaImg) {
+        this.affectedAreaImg = affectedAreaImg;
+    }
+
+    public Fertilizers getFertilizers() {
+        return fertilizers;
+    }
+
+    public void setFertilizers(Fertilizers fertilizers) {
+        this.fertilizers = fertilizers;
+    }
+
+    public Set<Solution> getSolutions() {
+        return solutions;
+    }
+
+    public void setSolutions(Set<Solution> solutions) {
+        this.solutions = solutions;
+    }
+
+
 }

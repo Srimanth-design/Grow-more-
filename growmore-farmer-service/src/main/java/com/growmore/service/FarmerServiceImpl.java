@@ -1,16 +1,18 @@
 package com.growmore.service;
 
 import com.growmore.exception.FarmerNotFoundException;
+import com.growmore.feign.IProblemFeign;
 import com.growmore.model.Farmer;
-import com.growmore.model.Intensity;
+import com.growmore.model.Problem;
 import com.growmore.repository.IFarmerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class FarmerServiceImpl implements IFarmerService {
+public class FarmerServiceImpl implements IFarmerService,IProblemFeign {
 
     IFarmerRepository farmerRepository;
 
@@ -18,6 +20,9 @@ public class FarmerServiceImpl implements IFarmerService {
     public void setFarmerRepository(IFarmerRepository farmerRepository) {
         this.farmerRepository = farmerRepository;
     }
+
+    @Autowired
+    private IProblemFeign problemFeign;
 
     @Override
     public Farmer addFarmer(Farmer farmer) {
@@ -82,6 +87,17 @@ public class FarmerServiceImpl implements IFarmerService {
             throw new FarmerNotFoundException("soil not found");
         }
         return farmers;
+    }
+
+
+    @Override
+    public List<Problem> getAllPro() {
+        return problemFeign.getAllPro();
+    }
+
+    @Override
+    public List<Problem> getByIntensity(String intensity) {
+        return problemFeign.getByIntensity(intensity);
     }
 
 
