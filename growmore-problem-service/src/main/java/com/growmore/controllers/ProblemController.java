@@ -136,7 +136,44 @@ public class ProblemController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "getting by farmer problem and alternate solution");
         List<Problem> problems = problemService.getByFertAlter(fertilizer, alternative);
-        logger.info("Got farmer details by farmer problem and alternative solution given by analyst :" + problems);
+        logger.info("Got problem details from fertilizer details and alternative solution given by analyst :" + problems);
         return ResponseEntity.ok().headers(headers).body(problems);
     }
+
+    /**
+     *
+     * @param alternative
+     * @return
+     * @throws ProblemNotFoundException
+     */
+
+    @GetMapping("/problems/alternative/{alternative}")
+    ResponseEntity<List<Problem>> getByAlternate(@PathVariable("alternative") String alternative) throws ProblemNotFoundException{
+        logger.debug("Got analyst suggested alternatives..");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by analyst suggested alternative");
+        List<Problem> problems = problemService.getByAlternate(alternative);
+        logger.info("Got problems alternative solutions given by analyst :" + problems);
+        return ResponseEntity.ok().headers(headers).body(problems);
+    }
+
+    /**
+     *
+     * @param alternative
+     * @param alternative2
+     * @return
+     * @throws ProblemNotFoundException
+     */
+
+    @GetMapping("/problems/alternative/{alternative}/altr2/{alternative2}")
+    ResponseEntity<List<Problem>> getByAlternatives(@PathVariable("alternative") String alternative,@PathVariable("alternative2") String alternative2) throws ProblemNotFoundException{
+        logger.debug("Got analyst suggested alternatives..");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by analyst suggested alternatives");
+        List<Problem> problems = problemService.getByAlternatives(alternative,alternative2);
+        logger.info("Got problems alternative solutions given by analyst :" + problems);
+        return ResponseEntity.ok().headers(headers).body(problems);
+
+    }
+
 }

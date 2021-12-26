@@ -125,6 +125,23 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+    /**
+     *
+     * @param city
+     * @return
+     * @throws FarmerNotFoundException
+     */
+
+    @GetMapping("/farmers/city/{city}")
+    ResponseEntity<List<Farmer>> getByCity(@PathVariable("city") String city) throws FarmerNotFoundException{
+        logger.debug("Get farmer by city inputs:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by city inputs");
+        List<Farmer> farmers = farmerService.getByCity(city);
+        logger.info("Got farmer details by city :" + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
+    }
+
 
     /**
      * @param soil
@@ -158,6 +175,7 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+
     @GetMapping("/farmers/problems")
     ResponseEntity<List<Problem>> getAllPro(){
         List<Problem> problems = problemFeign.getAllPro();
@@ -166,8 +184,14 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(problems);
     }
 
+    /**
+     *
+     * @param intensity
+     * @return
+     * @throws FarmerNotFoundException
+     */
     @GetMapping("farmers/problems/intensity/{intensity}")
-    ResponseEntity<List<Problem>> getByIntensity(@PathVariable("intensity") String intensity){
+    ResponseEntity<List<Problem>> getByIntensity(@PathVariable("intensity") String intensity) throws FarmerNotFoundException{
         logger.debug("Get farmer details by problem intensity details:");
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "getting by problem and farmer inputs");
@@ -175,6 +199,8 @@ public class FarmerController {
         logger.info("Got farmer details by problem intensity :" + farmers);
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
+
+
 
 
 }

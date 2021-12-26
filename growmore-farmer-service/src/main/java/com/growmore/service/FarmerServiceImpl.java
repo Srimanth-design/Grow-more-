@@ -89,6 +89,15 @@ public class FarmerServiceImpl implements IFarmerService,IProblemFeign {
         return farmers;
     }
 
+    @Override
+    public List<Farmer> getByCity(String city) throws FarmerNotFoundException {
+        List<Farmer> farmers = farmerRepository.getByCity(city);
+        if (farmers.isEmpty()) {
+            throw new FarmerNotFoundException("city not found");
+        }
+        return farmers;
+    }
+
 
     @Override
     public List<Problem> getAllPro() {
@@ -96,8 +105,12 @@ public class FarmerServiceImpl implements IFarmerService,IProblemFeign {
     }
 
     @Override
-    public List<Problem> getByIntensity(String intensity) {
-        return problemFeign.getByIntensity(intensity);
+    public List<Problem> getByIntensity(String intensity) throws FarmerNotFoundException {
+        List<Problem>problems  =   problemFeign.getByIntensity(intensity);
+        if(problems.isEmpty()){
+            throw new FarmerNotFoundException("intensity did not match the condition");
+        }
+        return problems;
     }
 
 

@@ -24,4 +24,9 @@ public interface IProblemService {
     List<Problem> getByFertilizer(String fertilizer) throws  ProblemNotFoundException;
 
     List<Problem> getByFertAlter(String fertilizer, String alternative) throws ProblemNotFoundException;
+
+    List<Problem> getByAlternate(String alternative) throws ProblemNotFoundException;
+
+    List<Problem> getByAlternatives(String alternative, String alternative2) throws ProblemNotFoundException;
+
 }

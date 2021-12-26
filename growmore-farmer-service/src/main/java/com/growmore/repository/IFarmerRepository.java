@@ -20,6 +20,9 @@ public interface IFarmerRepository extends JpaRepository<Farmer, Integer> {
     @Query("from Farmer f inner join f.farmDetails d where d.soil=?1")
     List<Farmer> getBySoil(String soil) throws FarmerNotFoundException;
 
+    @Query("from Farmer f inner join f.farmDetails d where d.city=?1")
+    List<Farmer> getByCity(String city) throws FarmerNotFoundException;
+
     @Query("from Farmer f inner join f.farmDetails d where d.soil=?1 and d.city=?2 ")
     List<Farmer> getBySoilCity(String soil, String city) throws FarmerNotFoundException;
 

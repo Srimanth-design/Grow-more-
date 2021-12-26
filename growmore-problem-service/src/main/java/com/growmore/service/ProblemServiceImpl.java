@@ -49,7 +49,7 @@ public class ProblemServiceImpl implements IProblemService {
     @Override
     public List<Problem> getByIntensity(String intensity) throws ProblemNotFoundException {
         List<Problem> problems = problemRepository.getByIntensity(Intensity.valueOf(intensity));
-        if(problems.isEmpty()){
+        if (problems.isEmpty()) {
             throw new ProblemNotFoundException("Problem with this intensity not exists.");
         }
         return problems;
@@ -57,8 +57,8 @@ public class ProblemServiceImpl implements IProblemService {
 
     @Override
     public List<Problem> getByFertilizer(String fertilizer) throws ProblemNotFoundException {
-        List<Problem> problems =  problemRepository.getByFertilizers(Fertilizers.valueOf(fertilizer));
-        if(problems.isEmpty()){
+        List<Problem> problems = problemRepository.getByFertilizers(Fertilizers.valueOf(fertilizer));
+        if (problems.isEmpty()) {
             throw new ProblemNotFoundException("No such fertilizer used before");
         }
         return problems;
@@ -67,8 +67,26 @@ public class ProblemServiceImpl implements IProblemService {
     @Override
     public List<Problem> getByFertAlter(String fertilizer, String alternative) throws ProblemNotFoundException {
         List<Problem> problems = problemRepository.getByPrevFertAlter(Fertilizers.valueOf(fertilizer), alternative);
-        if(problems.isEmpty()){
+        if (problems.isEmpty()) {
             throw new ProblemNotFoundException("No alternative provided");
+        }
+        return problems;
+    }
+
+    @Override
+    public List<Problem> getByAlternate(String alternative) throws ProblemNotFoundException {
+        List<Problem> problems = problemRepository.getByAlternate(alternative);
+        if (problems.isEmpty()) {
+            throw new ProblemNotFoundException("No alternate is provided");
+        }
+        return problems;
+    }
+
+    @Override
+    public List<Problem> getByAlternatives(String alternative, String alternative2) throws ProblemNotFoundException {
+        List<Problem> problems = problemRepository.getByAlternatives(alternative,alternative2);
+        if (problems.isEmpty()) {
+            throw new ProblemNotFoundException("No match exists");
         }
         return problems;
     }
