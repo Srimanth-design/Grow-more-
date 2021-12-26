@@ -73,3 +73,560 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:106) ~[spring-boot-2.5.8.jar:2.5.8]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
+2021-12-26 06:30:46.076  INFO 7396 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 7396 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 06:30:46.076 DEBUG 7396 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 06:30:46.076  INFO 7396 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 06:30:46.154  INFO 7396 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 06:30:46.154  INFO 7396 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=FARMER-SERVICE, profiles=[default], label=null, version=8a81bf075bed35cb1b11254093f3ddbc86b495b8, state=null
+2021-12-26 06:30:46.154  INFO 7396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 06:30:46.154  INFO 7396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 06:30:47.929  INFO 7396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 06:30:48.195  INFO 7396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 254 ms. Found 1 JPA repository interfaces.
+2021-12-26 06:30:48.632  INFO 7396 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=273efda5-b5da-3e8b-b92a-0874f3669a78
+2021-12-26 06:30:49.820  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 06:30:50.101  INFO 7396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3947 ms
+2021-12-26 06:30:50.241  WARN 7396 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:30:52.871  INFO 7396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:30:53.043  WARN 7396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 06:30:53.090  INFO 7396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 06:30:53.965  WARN 7396 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:30:55.261  INFO 7396 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 06:30:55.339  WARN 7396 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 06:30:55.355  INFO 7396 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 06:30:55.402  INFO 7396 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 06:30:56.495  INFO 7396 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 06:30:56.527  INFO 7396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 06:30:56.527  INFO 7396 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 06:30:56.933  INFO 7396 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 15.954 seconds (JVM running for 17.682)
+2021-12-26 06:30:57.230  WARN 7396 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2021-12-26 06:30:57.230 ERROR 7396 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'farmerid' in 'field list'
+2021-12-26 06:30:57.245  INFO 7396 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-26 06:30:57.292 ERROR 7396 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:805) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:786) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.8.jar:2.5.8]
+	at com.growmore.GrowmoreFarmerServiceApplication.main(GrowmoreFarmerServiceApplication.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.8.jar:2.5.8]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.14.jar:5.3.14]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.14.jar:5.3.14]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.7.jar:2.5.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.14.jar:5.3.14]
+	at com.sun.proxy.$Proxy145.save(Unknown Source) ~[na:na]
+	at com.growmore.service.FarmerServiceImpl.addFarmer(FarmerServiceImpl.java:29) ~[classes/:na]
+	at com.growmore.GrowmoreFarmerServiceApplication.run(GrowmoreFarmerServiceApplication.java:72) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:802) ~[spring-boot-2.5.8.jar:2.5.8]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.persister.collection.AbstractCollectionPersister.recreate(AbstractCollectionPersister.java:1357) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.persister.collection.OneToManyPersister.recreate(OneToManyPersister.java:187) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.action.internal.CollectionRecreateAction.execute(CollectionRecreateAction.java:50) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:99) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:448) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.14.jar:5.3.14]
+	... 27 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'farmerid' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.33.jar:5.4.33]
+	... 48 common frames omitted
+
+2021-12-26 06:30:57.308  INFO 7396 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 06:30:57.870  INFO 7396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:35:22.464  INFO 12752 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 12752 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 06:35:22.464 DEBUG 12752 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 06:35:22.464  INFO 12752 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 06:35:22.526  INFO 12752 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 06:35:22.526  INFO 12752 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=FARMER-SERVICE, profiles=[default], label=null, version=8a81bf075bed35cb1b11254093f3ddbc86b495b8, state=null
+2021-12-26 06:35:22.542  INFO 12752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 06:35:22.542  INFO 12752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 06:35:24.033  INFO 12752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 06:35:24.283  INFO 12752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 236 ms. Found 1 JPA repository interfaces.
+2021-12-26 06:35:24.721  INFO 12752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=273efda5-b5da-3e8b-b92a-0874f3669a78
+2021-12-26 06:35:25.877  INFO 12752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 06:35:26.111  INFO 12752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3569 ms
+2021-12-26 06:35:26.252  WARN 12752 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:35:28.867  INFO 12752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:35:29.023  WARN 12752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 06:35:29.070  INFO 12752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 06:35:30.023  WARN 12752 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:35:31.382  INFO 12752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 06:35:31.460  WARN 12752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 06:35:31.491  INFO 12752 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 06:35:31.523  INFO 12752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 06:35:32.569  INFO 12752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 06:35:32.601  INFO 12752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 06:35:32.601  INFO 12752 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 06:35:32.929  INFO 12752 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 17.309 seconds (JVM running for 20.227)
+2021-12-26 06:35:33.147  WARN 12752 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2021-12-26 06:35:33.147 ERROR 12752 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'farmerid' in 'field list'
+2021-12-26 06:35:33.163  INFO 12752 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-26 06:35:33.194 ERROR 12752 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:805) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:786) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.8.jar:2.5.8]
+	at com.growmore.GrowmoreFarmerServiceApplication.main(GrowmoreFarmerServiceApplication.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.8.jar:2.5.8]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.14.jar:5.3.14]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.14.jar:5.3.14]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.7.jar:2.5.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.14.jar:5.3.14]
+	at com.sun.proxy.$Proxy145.save(Unknown Source) ~[na:na]
+	at com.growmore.service.FarmerServiceImpl.addFarmer(FarmerServiceImpl.java:29) ~[classes/:na]
+	at com.growmore.GrowmoreFarmerServiceApplication.run(GrowmoreFarmerServiceApplication.java:72) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:802) ~[spring-boot-2.5.8.jar:2.5.8]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.persister.collection.AbstractCollectionPersister.recreate(AbstractCollectionPersister.java:1357) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.persister.collection.OneToManyPersister.recreate(OneToManyPersister.java:187) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.action.internal.CollectionRecreateAction.execute(CollectionRecreateAction.java:50) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:99) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1362) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:453) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3212) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2380) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:448) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.4.33.jar:5.4.33]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.14.jar:5.3.14]
+	... 27 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'farmerid' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.33.jar:5.4.33]
+	... 48 common frames omitted
+
+2021-12-26 06:35:33.210  INFO 12752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 06:35:33.678  INFO 12752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:48:51.565  INFO 7624 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 7624 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 06:48:51.565 DEBUG 7624 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 06:48:51.565  INFO 7624 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 06:48:51.690  INFO 7624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 06:48:51.690  INFO 7624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 06:48:53.377  INFO 7624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 06:48:53.627  INFO 7624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 233 ms. Found 1 JPA repository interfaces.
+2021-12-26 06:48:54.142  INFO 7624 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58175a8d-b90c-3baf-9d81-468c0aa6414b
+2021-12-26 06:48:55.301  INFO 7624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 06:48:55.510  INFO 7624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3820 ms
+2021-12-26 06:48:55.651  WARN 7624 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:48:56.432  WARN 7624 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-12-26 06:48:58.791  INFO 7624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:48:58.994  WARN 7624 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 06:48:59.056  INFO 7624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 06:48:59.916  WARN 7624 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:49:01.363  INFO 7624 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 06:49:01.456  WARN 7624 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 06:49:01.472  INFO 7624 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 06:49:01.503  INFO 7624 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 06:49:02.909  INFO 7624 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 06:49:02.940  INFO 7624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 06:49:02.940  INFO 7624 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 06:49:03.456  INFO 7624 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 13.665 seconds (JVM running for 15.617)
+2021-12-26 06:49:51.855  INFO 7624 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 06:49:52.058  INFO 7624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:50:04.659  INFO 10268 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 10268 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 06:50:04.659 DEBUG 10268 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 06:50:04.659  INFO 10268 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 06:50:04.769  INFO 10268 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 06:50:04.769  INFO 10268 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 06:50:08.329  INFO 10268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 06:50:08.595  INFO 10268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 253 ms. Found 1 JPA repository interfaces.
+2021-12-26 06:50:09.095  INFO 10268 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58175a8d-b90c-3baf-9d81-468c0aa6414b
+2021-12-26 06:50:10.376  INFO 10268 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 06:50:10.654  INFO 10268 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5885 ms
+2021-12-26 06:50:10.827  WARN 10268 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:50:11.813  WARN 10268 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-12-26 06:50:14.258  INFO 10268 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:50:14.430  WARN 10268 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 06:50:14.492  INFO 10268 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 06:50:15.304  WARN 10268 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:50:16.629  INFO 10268 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 06:50:16.739  WARN 10268 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 06:50:16.754  INFO 10268 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 06:50:16.801  INFO 10268 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 06:50:17.942  INFO 10268 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 06:50:17.973  INFO 10268 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 06:50:17.973  INFO 10268 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 06:50:18.301  INFO 10268 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 15.886 seconds (JVM running for 18.229)
+2021-12-26 06:54:01.813  INFO 10268 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 06:54:02.016  INFO 10268 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:54:13.172  INFO 6532 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 6532 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 06:54:13.172 DEBUG 6532 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 06:54:13.172  INFO 6532 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 06:54:13.282  INFO 6532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 06:54:13.282  INFO 6532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 06:54:14.813  INFO 6532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 06:54:15.094  INFO 6532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 271 ms. Found 1 JPA repository interfaces.
+2021-12-26 06:54:15.578  INFO 6532 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58175a8d-b90c-3baf-9d81-468c0aa6414b
+2021-12-26 06:54:17.078  INFO 6532 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 06:54:17.390  INFO 6532 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4108 ms
+2021-12-26 06:54:17.562  WARN 6532 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:54:18.593  WARN 6532 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-12-26 06:54:21.302  INFO 6532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 06:54:21.583  WARN 6532 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 06:54:21.661  INFO 6532 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 06:54:23.036  WARN 6532 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 06:54:24.692  INFO 6532 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 06:54:24.801  WARN 6532 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 06:54:24.832  INFO 6532 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 06:54:24.895  INFO 6532 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 06:54:26.987  INFO 6532 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 06:54:27.018  INFO 6532 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 06:54:27.034  INFO 6532 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 06:54:27.565  INFO 6532 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 15.653 seconds (JVM running for 17.549)
+2021-12-26 07:07:08.638  INFO 6532 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 07:07:10.138  INFO 6532 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:07:12.740  WARN 6532 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-26 07:07:17.217  WARN 6532 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-26 07:07:17.217  WARN 6532 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FARMER-SERVICE/FARMER-SERVICE:62e396ad-59bf-406b-9c93-175c9e5ab0b7 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-26 07:07:17.217  WARN 6532 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-26 07:07:17.930  WARN 6532 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-26 07:07:17.930 ERROR 6532 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FARMER-SERVICE/FARMER-SERVICE:62e396ad-59bf-406b-9c93-175c9e5ab0b7 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:196) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:189) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:137) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:106) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-12-26 07:07:34.961  INFO 8320 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 8320 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 07:07:34.961 DEBUG 8320 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 07:07:34.961  INFO 8320 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 07:07:35.071  INFO 8320 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 07:07:35.071  INFO 8320 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=FARMER-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-26 07:07:35.071  INFO 8320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 07:07:35.071  INFO 8320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 07:07:36.617  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 07:07:36.851  INFO 8320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 232 ms. Found 1 JPA repository interfaces.
+2021-12-26 07:07:37.337  INFO 8320 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=273efda5-b5da-3e8b-b92a-0874f3669a78
+2021-12-26 07:07:38.540  INFO 8320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 07:07:38.790  INFO 8320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3719 ms
+2021-12-26 07:07:38.915  WARN 8320 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:07:41.508  INFO 8320 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:07:41.680  WARN 8320 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 07:07:41.758  INFO 8320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 07:07:42.674  WARN 8320 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:07:44.096  INFO 8320 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 07:07:44.190  WARN 8320 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 07:07:44.205  INFO 8320 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 07:07:44.283  INFO 8320 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 07:07:45.377  INFO 8320 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 07:07:45.424  INFO 8320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 07:07:45.424  INFO 8320 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 07:07:45.799  INFO 8320 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 15.646 seconds (JVM running for 17.977)
+2021-12-26 07:07:59.971  INFO 8320 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 07:07:59.977  INFO 8320 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-12-26 07:08:06.251  WARN 8320 --- [http-nio-8081-exec-3] o.h.e.loading.internal.LoadContexts      : HHH000100: Fail-safe cleanup (collections) : org.hibernate.engine.loading.internal.CollectionLoadContext@4abbb1c2<rs=HikariProxyResultSet@1044966812 wrapping Result set representing update count of 2>
+2021-12-26 07:08:06.251  WARN 8320 --- [http-nio-8081-exec-3] o.h.e.l.internal.CollectionLoadContext   : HHH000160: On CollectionLoadContext#cleanup, localLoadingCollectionKeys contained [1] entries
+2021-12-26 07:08:06.282  WARN 8320 --- [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304]
+2021-12-26 07:08:17.516  WARN 8320 --- [http-nio-8081-exec-5] o.h.e.loading.internal.LoadContexts      : HHH000100: Fail-safe cleanup (collections) : org.hibernate.engine.loading.internal.CollectionLoadContext@3800148c<rs=HikariProxyResultSet@1661063483 wrapping Result set representing update count of 2>
+2021-12-26 07:08:17.517  WARN 8320 --- [http-nio-8081-exec-5] o.h.e.l.internal.CollectionLoadContext   : HHH000160: On CollectionLoadContext#cleanup, localLoadingCollectionKeys contained [1] entries
+2021-12-26 07:08:17.522  WARN 8320 --- [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304]
+2021-12-26 07:08:52.218  WARN 8320 --- [http-nio-8081-exec-6] o.h.e.loading.internal.LoadContexts      : HHH000100: Fail-safe cleanup (collections) : org.hibernate.engine.loading.internal.CollectionLoadContext@3434b7a5<rs=HikariProxyResultSet@993285094 wrapping Result set representing update count of 2>
+2021-12-26 07:08:52.219  WARN 8320 --- [http-nio-8081-exec-6] o.h.e.l.internal.CollectionLoadContext   : HHH000160: On CollectionLoadContext#cleanup, localLoadingCollectionKeys contained [1] entries
+2021-12-26 07:08:52.224  WARN 8320 --- [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304]
+2021-12-26 07:11:50.433 DEBUG 8320 --- [http-nio-8081-exec-9] c.growmore.controllers.FarmerController  : Getting by Id.. using method
+2021-12-26 07:11:50.478  INFO 8320 --- [http-nio-8081-exec-9] c.growmore.controllers.FarmerController  : Got farmer details by Id:Farmer(farmerId=1, name=Ramesh, age=45, gender=Male, farmDetails=FarmDetails(farmId=100, farm=Tomatoes, farmArea=10 acres, soil=red soil, city=Ongole, zipCode=523001))
+2021-12-26 07:11:57.675  WARN 8320 --- [http-nio-8081-exec-10] o.h.e.loading.internal.LoadContexts      : HHH000100: Fail-safe cleanup (collections) : org.hibernate.engine.loading.internal.CollectionLoadContext@13012e4c<rs=HikariProxyResultSet@954403201 wrapping Result set representing update count of 2>
+2021-12-26 07:11:57.675  WARN 8320 --- [http-nio-8081-exec-10] o.h.e.l.internal.CollectionLoadContext   : HHH000160: On CollectionLoadContext#cleanup, localLoadingCollectionKeys contained [1] entries
+2021-12-26 07:11:57.677  WARN 8320 --- [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304]
+2021-12-26 07:12:01.570 DEBUG 8320 --- [http-nio-8081-exec-1] c.growmore.controllers.FarmerController  : Getting by Id.. using method
+2021-12-26 07:12:01.580  INFO 8320 --- [http-nio-8081-exec-1] c.growmore.controllers.FarmerController  : Got farmer details by Id:Farmer(farmerId=1, name=Ramesh, age=45, gender=Male, farmDetails=FarmDetails(farmId=100, farm=Tomatoes, farmArea=10 acres, soil=red soil, city=Ongole, zipCode=523001))
+2021-12-26 07:12:10.537  WARN 8320 --- [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.RetryableException: Connection refused: connect executing GET http://localhost:8082/problem-api/problems]
+2021-12-26 07:12:18.740 DEBUG 8320 --- [http-nio-8081-exec-3] c.growmore.controllers.FarmerController  : Get farmer by age:
+2021-12-26 07:12:18.776  INFO 8320 --- [http-nio-8081-exec-3] c.growmore.controllers.FarmerController  : Got farmer details by age :[Farmer(farmerId=1, name=Ramesh, age=45, gender=Male, farmDetails=FarmDetails(farmId=100, farm=Tomatoes, farmArea=10 acres, soil=red soil, city=Ongole, zipCode=523001)), Farmer(farmerId=2, name=Mrinali, age=41, gender=Female, farmDetails=FarmDetails(farmId=101, farm=Mangoes, farmArea=40 acres, soil=red soil, city=Himinpalli, zipCode=624001))]
+2021-12-26 07:12:24.220  WARN 8320 --- [http-nio-8081-exec-4] o.h.e.loading.internal.LoadContexts      : HHH000100: Fail-safe cleanup (collections) : org.hibernate.engine.loading.internal.CollectionLoadContext@26db4ae<rs=HikariProxyResultSet@1272514312 wrapping Result set representing update count of 2>
+2021-12-26 07:12:24.221  WARN 8320 --- [http-nio-8081-exec-4] o.h.e.l.internal.CollectionLoadContext   : HHH000160: On CollectionLoadContext#cleanup, localLoadingCollectionKeys contained [1] entries
+2021-12-26 07:12:24.222  WARN 8320 --- [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304]
+2021-12-26 07:13:13.962  INFO 8320 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 07:13:14.180  INFO 8320 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:13:17.227  WARN 8320 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2021-12-26 07:13:24.636  INFO 10256 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 10256 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 07:13:24.636 DEBUG 10256 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 07:13:24.636  INFO 10256 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 07:13:24.855  INFO 10256 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 07:13:24.855  INFO 10256 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=FARMER-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-26 07:13:24.870  INFO 10256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 07:13:24.870  INFO 10256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 07:13:27.682  INFO 10256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 07:13:28.153  INFO 10256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 462 ms. Found 1 JPA repository interfaces.
+2021-12-26 07:13:28.996  INFO 10256 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=273efda5-b5da-3e8b-b92a-0874f3669a78
+2021-12-26 07:13:33.323  INFO 10256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 07:13:33.916  INFO 10256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9046 ms
+2021-12-26 07:13:34.384  WARN 10256 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:13:38.990  INFO 10256 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:13:39.588  WARN 10256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 07:13:39.661  INFO 10256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 07:13:41.683  WARN 10256 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:13:47.022  INFO 10256 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 07:13:47.975  WARN 10256 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 07:13:48.340  INFO 10256 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 07:13:48.514  INFO 10256 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 07:13:50.843  INFO 10256 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 07:13:51.202  INFO 10256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 07:13:51.280  INFO 10256 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 07:13:52.155  INFO 10256 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 30.303 seconds (JVM running for 32.052)
+2021-12-26 07:14:05.333  INFO 10256 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 07:14:05.337  INFO 10256 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-26 07:14:05.688  WARN 10256 --- [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$BadGateway: [502] during [GET] to [http://localhost:8082/problem-api/problems] [IProblemFeign#getAllPro()]: [{"timestamp":"2021-12-26T07:14:05.6324628","message":"Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304","status":502,"error":"Other Exception"}]]
+2021-12-26 07:15:53.361  INFO 10256 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 07:15:53.571  INFO 10256 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:16:09.632  INFO 4276 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 4276 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 07:16:09.632 DEBUG 4276 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 07:16:09.632  INFO 4276 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 07:16:09.757  INFO 4276 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 07:16:09.757  INFO 4276 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=FARMER-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-26 07:16:09.757  INFO 4276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 07:16:09.757  INFO 4276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 07:16:13.694  INFO 4276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 07:16:14.128  INFO 4276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 422 ms. Found 1 JPA repository interfaces.
+2021-12-26 07:16:15.284  INFO 4276 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=273efda5-b5da-3e8b-b92a-0874f3669a78
+2021-12-26 07:16:18.252  INFO 4276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 07:16:19.143  INFO 4276 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9386 ms
+2021-12-26 07:16:20.689  WARN 4276 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:16:26.231  INFO 4276 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:16:26.747  WARN 4276 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 07:16:26.918  WARN 4276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-26 07:16:28.293  WARN 4276 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:16:29.868  INFO 4276 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 07:16:29.961  WARN 4276 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 07:16:29.977  INFO 4276 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 07:16:30.024  INFO 4276 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 07:16:31.133  INFO 4276 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 07:16:31.180  INFO 4276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 07:16:31.195  INFO 4276 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 07:16:31.570  INFO 4276 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 26.822 seconds (JVM running for 29.789)
+2021-12-26 07:17:03.774  INFO 4276 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 07:17:03.778  INFO 4276 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-26 07:17:08.885  WARN 4276 --- [http-nio-8081-exec-2] o.h.e.loading.internal.LoadContexts      : HHH000100: Fail-safe cleanup (collections) : org.hibernate.engine.loading.internal.CollectionLoadContext@7ed9b689<rs=HikariProxyResultSet@1912367785 wrapping Result set representing update count of 2>
+2021-12-26 07:17:08.885  WARN 4276 --- [http-nio-8081-exec-2] o.h.e.l.internal.CollectionLoadContext   : HHH000160: On CollectionLoadContext#cleanup, localLoadingCollectionKeys contained [1] entries
+2021-12-26 07:17:08.901  WARN 4276 --- [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.growmore.model.Analyst with id 304; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.growmore.model.Analyst with id 304]
+2021-12-26 07:17:10.333 DEBUG 4276 --- [http-nio-8081-exec-3] c.growmore.controllers.FarmerController  : Get farmer by soil and city inputs:
+2021-12-26 07:17:10.384  INFO 4276 --- [http-nio-8081-exec-3] c.growmore.controllers.FarmerController  : Got farmer details by soil and city :[Farmer(farmerId=1, name=Ramesh, age=45, gender=Male, farmDetails=FarmDetails(farmId=100, farm=Tomatoes, farmArea=10 acres, soil=red soil, city=Ongole, zipCode=523001))]
+2021-12-26 07:18:57.306  INFO 4276 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 07:18:58.031  INFO 4276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:19:01.478  WARN 4276 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-26 07:19:40.389  INFO 4052 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Starting GrowmoreFarmerServiceApplication using Java 11.0.12 on Srimanth with PID 4052 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-farmer-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 07:19:40.405 DEBUG 4052 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 07:19:40.405  INFO 4052 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 07:19:40.514  INFO 4052 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 07:19:40.514  INFO 4052 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=FARMER-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-26 07:19:40.514  INFO 4052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 07:19:40.514  INFO 4052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 07:19:43.841  INFO 4052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 07:19:44.270  INFO 4052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 378 ms. Found 1 JPA repository interfaces.
+2021-12-26 07:19:45.426  INFO 4052 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=273efda5-b5da-3e8b-b92a-0874f3669a78
+2021-12-26 07:19:48.347  INFO 4052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-26 07:19:48.753  INFO 4052 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8239 ms
+2021-12-26 07:19:49.159  WARN 4052 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:19:55.853  INFO 4052 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:19:56.275  WARN 4052 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 07:19:56.399  INFO 4052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 07:20:00.461  WARN 4052 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 07:20:08.916  INFO 4052 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 07:20:09.119  WARN 4052 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 07:20:09.166  INFO 4052 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 07:20:09.291  INFO 4052 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 07:20:12.056  INFO 4052 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FARMER-SERVICE with eureka with status UP
+2021-12-26 07:20:12.103  INFO 4052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-26 07:20:12.103  INFO 4052 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2021-12-26 07:20:12.913  INFO 4052 --- [restartedMain] c.g.GrowmoreFarmerServiceApplication     : Started GrowmoreFarmerServiceApplication in 39.945 seconds (JVM running for 41.994)
+2021-12-26 07:20:20.830  INFO 4052 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 07:20:20.833  INFO 4052 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-26 07:21:09.221 DEBUG 4052 --- [http-nio-8081-exec-4] c.growmore.controllers.FarmerController  : Get farmer details by problem intensity details:
+2021-12-26 07:21:09.330  INFO 4052 --- [http-nio-8081-exec-4] c.growmore.controllers.FarmerController  : Got farmer details by problem intensity :[Problem(problemId=202, problem=Leaf damage, intensity=HIGH, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=EUROCHEM, solutions=[Solution(solutionId=403, solution=Apply organic Ketornol fertilizer, solutionImg=https://tse3.mm.bing.net/th/id/OIP.JC7SMgFXO7H9Wsn_899IAwAAAA?pid=ImgDet&rs=1, description=Apply mornings 3 times a week, alternative=Kimopal, problems=null), Solution(solutionId=404, solution=Apply organic Seripo fertilizer, solutionImg=https://tse3.mm.bing.net/th/id/OIP.JC7SMgFXO7H9Wsn_899IAwAAAA?pid=ImgDet&rs=1, description=Apply 1 time a week, alternative=Liop, problems=null)], analyst=null), Problem(problemId=203, problem=Stem damage, intensity=HIGH, affectedAreaImg=https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1, fertilizers=STARTER, solutions=[Solution(solutionId=407, solution=Apply organic Kinde fertilizer, solutionImg=https://tse3.mm.bing.net/th/id/OIP.JC7SMgFXO7H9Wsn_899IAwAAAA?pid=ImgDet&rs=1, description=Apply 2 times a week, alternative=Zindro, problems=null)], analyst=null)]
+2021-12-26 07:24:33.207  INFO 4052 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FARMER-SERVICE with eureka with status DOWN
+2021-12-26 07:24:33.694  INFO 4052 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 07:24:40.844  WARN 4052 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-26 07:24:45.000  WARN 4052 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-12-26 07:24:45.015 ERROR 4052 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FARMER-SERVICE/FARMER-SERVICE:09d93ed5-3410-4a7e-98a7-8fd33a3de4aa - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:196) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:189) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.0.5.jar:3.0.5]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172) ~[spring-boot-2.5.8.jar:2.5.8]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:137) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:106) ~[spring-boot-2.5.8.jar:2.5.8]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+

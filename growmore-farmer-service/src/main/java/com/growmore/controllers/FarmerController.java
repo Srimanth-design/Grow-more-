@@ -228,8 +228,16 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+    /**
+     *
+     * @param fertilizer
+     * @return
+     * @throws FarmerNotFoundException
+     * @description checking farmer used fertilizer from the farmer service
+     */
+
     @GetMapping("farmers/problems/fertilizer/{fertilizer}")
-    ResponseEntity<List<Problem>> getByFertilizer(@PathVariable("fertilizer") String fertilizer){
+    ResponseEntity<List<Problem>> getByFertilizer(@PathVariable("fertilizer") String fertilizer) throws FarmerNotFoundException{
         logger.debug("Get farmer details by fertilizers they used:");
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "from farmer service to problem inputs");

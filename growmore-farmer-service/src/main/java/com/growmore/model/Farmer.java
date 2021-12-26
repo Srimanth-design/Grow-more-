@@ -19,9 +19,11 @@ public class Farmer {
     private String name;
     private int age;
     private String gender;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @ToString.Exclude
     Set<Problem>problems;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "farmid")
     private FarmDetails farmDetails;

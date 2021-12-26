@@ -36,6 +36,9 @@ public class GrowmoreFarmerServiceApplication implements CommandLineRunner {
 
         Analyst analyst3 = new Analyst("Ramya", "Female", "B.S.C Agriculture", 10, 4);
 
+        Analyst analyst4 = new Analyst("Kirthi", "Female", "B.S.C Agriculture", 15, 3.5);
+
+
         Solution solution = new Solution("Apply organic ZEDO fertilizer", "https://tse3.mm.bing.net/th/id/OIP.JC7SMgFXO7H9Wsn_899IAwAAAA?pid=ImgDet&rs=1", "Apply afternoons and nights 3 times a week", "Nitrex");
 
         Solution solution2 = new Solution("Apply organic Ketornol fertilizer", "https://tse3.mm.bing.net/th/id/OIP.JC7SMgFXO7H9Wsn_899IAwAAAA?pid=ImgDet&rs=1", "Apply mornings 3 times a week", "Kimopal");
@@ -48,13 +51,13 @@ public class GrowmoreFarmerServiceApplication implements CommandLineRunner {
 
         Set<Solution> solutions = new HashSet<>(Arrays.asList(solution, solution2));
         Set<Solution> solutions1 = new HashSet<>(Arrays.asList(solution4, solution2));
-        Set<Solution> solutions2 = new HashSet<>(Arrays.asList(solution, solution2, solution5));
+        Set<Solution> solutions2 = new HashSet<>(Arrays.asList( solution3, solution5));
 
         Problem problem = new Problem("Bugs and insects", Intensity.LOW, "https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1", Fertilizers.NITREX, solutions, analyst);
 
         Problem problem1 = new Problem("Less yeild", Intensity.MEDIUM, "https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1", Fertilizers.TURF, solutions1, analyst2);
 
-        Problem problem2 = new Problem("Leaf damage", Intensity.HIGH, "https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1", Fertilizers.EUROCHEM, solutions2, analyst3);
+        Problem problem2 = new Problem("Stem damage", Intensity.HIGH, "https://tse4.mm.bing.net/th/id/OIP.E0b6sLSBAcOPtDjBkUeE8AHaFj?pid=ImgDet&rs=1", Fertilizers.STARTER, solutions2, analyst4);
 
 		Set<Problem> problems = new HashSet<>(Arrays.asList(problem,problem1));
         Set<Problem> problems1 = new HashSet<>(Arrays.asList(problem2));
