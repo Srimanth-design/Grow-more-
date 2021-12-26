@@ -32,6 +32,14 @@ public class Solution {
     @JsonIgnore
     private Set<Problem> problems;
 
+    /**
+     *
+     * @param solution
+     * @param solutionImg
+     * @param description
+     * @param alternative
+     */
+
     public Solution(String solution, String solutionImg, String description, String alternative) {
         this.solution = solution;
         this.solutionImg = solutionImg;

@@ -35,6 +35,7 @@ public class ProblemController {
     /**
      * @param problem
      * @return
+     * @description Adding new problems farmer is facing
      */
 
     @PostMapping("/problems")
@@ -44,6 +45,12 @@ public class ProblemController {
         headers.add("desc", "New problem added");
         return ResponseEntity.accepted().headers(headers).body(addProblem);
     }
+
+    /**
+     * @param problem
+     * @return
+     * @description updating a particular farmer problem if there is any
+     */
 
     @PutMapping("/problems")
     ResponseEntity<Void> updateProblem(@RequestBody Problem problem) {
@@ -56,6 +63,7 @@ public class ProblemController {
     /**
      * @param problemId
      * @return
+     * @description deleting problems from the problem ID
      */
 
     @DeleteMapping("/problems/problemId/{problemId}")
@@ -69,6 +77,7 @@ public class ProblemController {
     /**
      * @param problemId
      * @return
+     * @description getting all problems from the problem ID
      */
 
     @GetMapping("/problems/problemId/{problemId}")
@@ -81,6 +90,10 @@ public class ProblemController {
         return ResponseEntity.accepted().headers(headers).body(problem);
     }
 
+    /**
+     * @return
+     * @description getting all problems
+     */
 
     @GetMapping("/problems")
     ResponseEntity<List<Problem>> getAll() {
@@ -93,6 +106,7 @@ public class ProblemController {
     /**
      * @param intensity
      * @return
+     * @description getting all problems from the intensity of the issue farmer is in.
      */
 
     @GetMapping("/problems/intensity/{intensity}")
@@ -106,10 +120,10 @@ public class ProblemController {
     }
 
     /**
-     *
      * @param fertilizer
      * @return
      * @throws ProblemNotFoundException
+     * @description getting all problems from the fertilizers farmer used
      */
 
     @GetMapping("/problems/fertilizer/{fertilizer}")
@@ -123,15 +137,15 @@ public class ProblemController {
     }
 
     /**
-     *
      * @param fertilizer
      * @param alternative
      * @return
      * @throws ProblemNotFoundException
+     * @description getting all problems from the fertilizer and alternative used
      */
 
     @GetMapping("/problems/fertilizer/{fertilizer}/alternative/{alternative}")
-    ResponseEntity<List<Problem>> getByFertAlter(@PathVariable("fertilizer") String fertilizer,@PathVariable("alternative") String alternative) throws ProblemNotFoundException{
+    ResponseEntity<List<Problem>> getByFertAlter(@PathVariable("fertilizer") String fertilizer, @PathVariable("alternative") String alternative) throws ProblemNotFoundException {
         logger.debug("Get farmer by his/her problem and alternate solution:");
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "getting by farmer problem and alternate solution");
@@ -141,14 +155,14 @@ public class ProblemController {
     }
 
     /**
-     *
      * @param alternative
      * @return
      * @throws ProblemNotFoundException
+     * @description getting all problems from the alternative fertilizer farmer used
      */
 
     @GetMapping("/problems/alternative/{alternative}")
-    ResponseEntity<List<Problem>> getByAlternate(@PathVariable("alternative") String alternative) throws ProblemNotFoundException{
+    ResponseEntity<List<Problem>> getByAlternate(@PathVariable("alternative") String alternative) throws ProblemNotFoundException {
         logger.debug("Got analyst suggested alternatives..");
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "getting by analyst suggested alternative");
@@ -158,19 +172,19 @@ public class ProblemController {
     }
 
     /**
-     *
      * @param alternative
      * @param alternative2
      * @return
      * @throws ProblemNotFoundException
+     * @description getting all problems from the alternative fertilizer farmer used
      */
 
     @GetMapping("/problems/alternative/{alternative}/altr2/{alternative2}")
-    ResponseEntity<List<Problem>> getByAlternatives(@PathVariable("alternative") String alternative,@PathVariable("alternative2") String alternative2) throws ProblemNotFoundException{
+    ResponseEntity<List<Problem>> getByAlternatives(@PathVariable("alternative") String alternative, @PathVariable("alternative2") String alternative2) throws ProblemNotFoundException {
         logger.debug("Got analyst suggested alternatives..");
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "getting by analyst suggested alternatives");
-        List<Problem> problems = problemService.getByAlternatives(alternative,alternative2);
+        List<Problem> problems = problemService.getByAlternatives(alternative, alternative2);
         logger.info("Got problems alternative solutions given by analyst :" + problems);
         return ResponseEntity.ok().headers(headers).body(problems);
 

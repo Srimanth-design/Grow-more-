@@ -17,6 +17,8 @@ public interface IProblemFeign {
     @GetMapping("/problems/intensity/{intensity}")
     List<Problem> getByIntensity(@PathVariable("intensity") String intensity);
 
+    @GetMapping("/problems/fertilizer/{fertilizer}")
+    List<Problem> getByFertilizer(@PathVariable("fertilizer") String fertilizer);
 
 
 }

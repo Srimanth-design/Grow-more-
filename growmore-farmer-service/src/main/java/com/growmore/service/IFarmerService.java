@@ -28,7 +28,4 @@ public interface IFarmerService {
 
     List<Farmer> getBySoilCity(String soil, String city) throws FarmerNotFoundException;
 
-
-
-
 }

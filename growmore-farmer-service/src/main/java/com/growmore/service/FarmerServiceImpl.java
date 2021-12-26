@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FarmerServiceImpl implements IFarmerService,IProblemFeign {
+public class FarmerServiceImpl implements IFarmerService, IProblemFeign {
 
     IFarmerRepository farmerRepository;
 
@@ -106,12 +106,20 @@ public class FarmerServiceImpl implements IFarmerService,IProblemFeign {
 
     @Override
     public List<Problem> getByIntensity(String intensity) throws FarmerNotFoundException {
-        List<Problem>problems  =   problemFeign.getByIntensity(intensity);
-        if(problems.isEmpty()){
+        List<Problem> problems = problemFeign.getByIntensity(intensity);
+        if (problems.isEmpty()) {
             throw new FarmerNotFoundException("intensity did not match the condition");
         }
         return problems;
     }
 
+    @Override
+    public List<Problem> getByFertilizer(String fertilizer) throws FarmerNotFoundException {
+        List<Problem> problems = problemFeign.getByFertilizer(fertilizer);
+        if (problems.isEmpty()) {
+            throw new FarmerNotFoundException("No farmer used this fertilizer");
+        }
+        return problems;
+    }
 
 }

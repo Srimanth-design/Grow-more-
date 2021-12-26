@@ -23,6 +23,15 @@ public class Analyst {
     private int experience;
     private double rating;
 
+    /**
+     *
+     * @param name
+     * @param gender
+     * @param degree
+     * @param experience
+     * @param rating
+     */
+
     public Analyst(String name, String gender, String degree, int experience, double rating) {
         this.name = name;
         this.gender = gender;

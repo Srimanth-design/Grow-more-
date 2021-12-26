@@ -13,8 +13,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApiErrors {
+
     LocalDateTime timestamp;
     String message;
     int status;
     String error;
+
 }

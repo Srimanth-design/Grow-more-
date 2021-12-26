@@ -25,19 +25,19 @@ public class FarmerController {
     IProblemFeign problemFeign;
 
     /**
+     *
      * @param farmerService
+     * @description setter based dependency
      */
-
     @Autowired
     public void setFarmerService(IFarmerService farmerService) {
         this.farmerService = farmerService;
     }
 
-
-
     /**
      * @param farmer
      * @return
+     * @description adding farmer details
      */
     @PostMapping("/farmers")
     ResponseEntity<Farmer> addFarmer(@RequestBody Farmer farmer) {
@@ -51,6 +51,7 @@ public class FarmerController {
 
     /**
      * @param farmer
+     * @description updating farmer details
      */
     @PutMapping("/farmers")
     ResponseEntity<Void> updateFarmer(@RequestBody Farmer farmer) {
@@ -62,6 +63,7 @@ public class FarmerController {
 
     /**
      * @param farmerId
+     * @description Deleting farmer details from the farmer ID
      */
     @DeleteMapping("/farmers/farmerId/{farmerId}")
     ResponseEntity<Void> deleteFarmer(@PathVariable("farmerId") int farmerId) {
@@ -75,6 +77,7 @@ public class FarmerController {
      * @param gender
      * @return
      * @throws FarmerNotFoundException
+     * @description getting farmer details from the gender
      */
     @GetMapping("/farmers/gender/{gender}")
     ResponseEntity<List<Farmer>> getByGender(@PathVariable("gender") String gender) throws FarmerNotFoundException {
@@ -90,6 +93,7 @@ public class FarmerController {
      * @param age
      * @return
      * @throws FarmerNotFoundException
+     * @description Getting all the farmer details from the age
      */
     @GetMapping("/farmers/age/{age}")
     ResponseEntity<List<Farmer>> getByAge(@PathVariable("age") int age) throws FarmerNotFoundException {
@@ -105,6 +109,7 @@ public class FarmerController {
      * @param farmerId
      * @return
      * @throws FarmerNotFoundException
+     * @description Getting farmer details from the farmer ID
      */
     @GetMapping("/farmers/farmerId/{farmerId}")
     ResponseEntity<Farmer> getById(@PathVariable("farmerId") int farmerId) throws FarmerNotFoundException {
@@ -116,6 +121,13 @@ public class FarmerController {
         return ResponseEntity.accepted().headers(headers).body(farmer);
 
     }
+
+    /**
+     *
+     * @return
+     * @description Getting all farmers listed
+     *
+     */
 
     @GetMapping("/farmers")
     ResponseEntity<List<Farmer>> getAll() {
@@ -130,6 +142,8 @@ public class FarmerController {
      * @param city
      * @return
      * @throws FarmerNotFoundException
+     * @description Getting farmer details from the city
+     *
      */
 
     @GetMapping("/farmers/city/{city}")
@@ -148,6 +162,7 @@ public class FarmerController {
      * @param city
      * @return
      * @throws FarmerNotFoundException
+     * @description getting farmer details from the soil and the city
      */
     @GetMapping("/farmers/soil/{soil}/city/{city}")
     ResponseEntity<List<Farmer>> getBySoilCity(@PathVariable("soil") String soil, @PathVariable("city") String city) throws FarmerNotFoundException {
@@ -163,6 +178,7 @@ public class FarmerController {
      * @param soil
      * @return
      * @throws FarmerNotFoundException
+     * @description checking farmer details from the soil details
      */
 
     @GetMapping("/farmers/soil/{soil}")
@@ -175,6 +191,16 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+    /**
+     * ----------- Using feign Client ----------
+     */
+
+    /**
+     *
+     * @return
+     * @description checking all problems from the farmer service
+     *
+     */
 
     @GetMapping("/farmers/problems")
     ResponseEntity<List<Problem>> getAllPro(){
@@ -189,18 +215,27 @@ public class FarmerController {
      * @param intensity
      * @return
      * @throws FarmerNotFoundException
+     * @description checking problem intensity from the farmer service
+     *
      */
     @GetMapping("farmers/problems/intensity/{intensity}")
     ResponseEntity<List<Problem>> getByIntensity(@PathVariable("intensity") String intensity) throws FarmerNotFoundException{
         logger.debug("Get farmer details by problem intensity details:");
         HttpHeaders headers = new HttpHeaders();
-        headers.add("desc", "getting by problem and farmer inputs");
+        headers.add("desc", "from farmer service to problem inputs");
         List<Problem> farmers = problemFeign.getByIntensity(intensity);
         logger.info("Got farmer details by problem intensity :" + farmers);
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
-
-
+    @GetMapping("farmers/problems/fertilizer/{fertilizer}")
+    ResponseEntity<List<Problem>> getByFertilizer(@PathVariable("fertilizer") String fertilizer){
+        logger.debug("Get farmer details by fertilizers they used:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "from farmer service to problem inputs");
+        List<Problem> farmers = problemFeign.getByFertilizer(fertilizer);
+        logger.info("Got farmer details by fertilizers they used :" + farmers);
+        return ResponseEntity.ok().headers(headers).body(farmers);
+    }
 
 }

@@ -13,15 +13,10 @@ import java.util.List;
 @Repository
 public interface IProblemRepository extends JpaRepository<Problem, Integer> {
 
-    /*
-        Problem
-     */
 
     List<Problem> getByIntensity(Intensity intensity) throws ProblemNotFoundException;
 
     List<Problem> getByFertilizers(Fertilizers fertilizer) throws ProblemNotFoundException;
-
-
 
     @Query("from Problem p inner join p.solutions s where s.alternative = ?1")
     List<Problem> getByAlternate(String alternative) throws ProblemNotFoundException;

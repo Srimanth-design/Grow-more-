@@ -8,9 +8,6 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Set;
 
-
-
-
 @ToString
 @NoArgsConstructor
 @Entity
@@ -38,6 +35,16 @@ public class Problem {
     @JoinColumn(name="analystid")
 
     private Analyst analyst;
+
+    /**
+     *
+     * @param problem
+     * @param intensity
+     * @param affectedAreaImg
+     * @param fertilizers
+     * @param solutions
+     * @param analyst
+     */
 
     public Problem(String problem, Intensity intensity, String affectedAreaImg, Fertilizers fertilizers, Set<Solution> solutions, Analyst analyst) {
         this.problem = problem;

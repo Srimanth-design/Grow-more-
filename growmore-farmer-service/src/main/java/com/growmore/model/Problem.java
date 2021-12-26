@@ -36,6 +36,16 @@ public class Problem {
     @JoinColumn(name="analystid")
     private Analyst analyst;
 
+    /**
+     *
+     * @param problem
+     * @param intensity
+     * @param affectedAreaImg
+     * @param fertilizers
+     * @param solutions
+     * @param analyst
+     */
+
     public Problem(String problem, Intensity intensity, String affectedAreaImg, Fertilizers fertilizers, Set<Solution> solutions, Analyst analyst) {
         this.problem = problem;
         this.intensity = intensity;

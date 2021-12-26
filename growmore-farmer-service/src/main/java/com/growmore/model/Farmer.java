@@ -26,6 +26,14 @@ public class Farmer {
     @JoinColumn(name = "farmid")
     private FarmDetails farmDetails;
 
+    /**
+     *
+     * @param name
+     * @param age
+     * @param gender
+     * @param problems
+     * @param farmDetails
+     */
     public Farmer(String name, int age, String gender, Set<Problem> problems, FarmDetails farmDetails) {
         this.name = name;
         this.age = age;

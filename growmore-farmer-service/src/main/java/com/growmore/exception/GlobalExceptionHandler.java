@@ -19,6 +19,15 @@ import java.time.LocalDateTime;
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
+    /**
+     *
+     * @param ex
+     * @param headers
+     * @param status
+     * @param request
+     * @return
+     */
+
     @Override
     protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException ex,
                                                                          HttpHeaders headers, HttpStatus status, WebRequest request) {
@@ -28,6 +37,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         ApiErrors errors = new ApiErrors(timestamp, message, status.value(), error);
         return ResponseEntity.status(status).body(errors);
     }
+
+    /**
+     *
+     * @param ex
+     * @param headers
+     * @param status
+     * @param request
+     * @return
+     */
 
     @Override
     protected ResponseEntity<Object> handleHttpMediaTypeNotSupported(HttpMediaTypeNotSupportedException ex,
@@ -39,6 +57,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(status).body(errors);
     }
 
+    /**
+     *
+     * @param ex
+     * @param headers
+     * @param status
+     * @param request
+     * @return
+     */
+
     @Override
     protected ResponseEntity<Object> handleMissingPathVariable(MissingPathVariableException ex, HttpHeaders headers,
                                                                HttpStatus status, WebRequest request) {
@@ -48,6 +75,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         ApiErrors errors = new ApiErrors(timestamp, message, status.value(), error);
         return ResponseEntity.status(status).body(errors);
     }
+
+    /**
+     *
+     * @param ex
+     * @param headers
+     * @param status
+     * @param request
+     * @return
+     */
 
     @Override
     protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex,
@@ -59,6 +95,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(status).body(errors);
     }
 
+    /**
+     *
+     * @param ex
+     * @param headers
+     * @param status
+     * @param request
+     * @return
+     */
+
     @Override
     protected ResponseEntity<Object> handleTypeMismatch(TypeMismatchException ex, HttpHeaders headers,
                                                         HttpStatus status, WebRequest request) {
@@ -69,6 +114,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(status).body(errors);
     }
 
+    /**
+     *
+     * @param ex
+     * @return
+     */
+
     @ExceptionHandler(FarmerNotFoundException.class)
     protected ResponseEntity<Object> handleProductNotFound(FarmerNotFoundException ex) {
         String message = ex.getMessage();
@@ -77,6 +128,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         ApiErrors errors = new ApiErrors(timestamp, message, HttpStatus.CONFLICT.value(), error);
         return ResponseEntity.status(HttpStatus.CONFLICT).body(errors);
     }
+
+    /**
+     *
+     * @param ex
+     * @return
+     */
 
     @ExceptionHandler(Exception.class)
     protected ResponseEntity<Object> handleOtherException(Exception ex) {

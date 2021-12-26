@@ -25,6 +25,16 @@ public class FarmDetails {
     @Column(name = "zipcode")
     private int zipCode;
 
+    /**
+     *
+     * @param farm
+     * @param farmArea
+     * @param soil
+     * @param city
+     * @param zipCode
+     */
+
+
     public FarmDetails(String farm, String farmArea, String soil, String city, int zipCode) {
         this.farm = farm;
         this.farmArea = farmArea;
