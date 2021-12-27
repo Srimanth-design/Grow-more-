@@ -25,10 +25,20 @@ public class Farmer {
     private int age;
     private String gender;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ToString.Exclude
     Set<Problem>problems;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "farmid")
     private FarmDetails farmDetails;
+
+    /**
+     *
+     * @param name
+     * @param age
+     * @param gender
+     * @param problems
+     * @param farmDetails
+     */
 
     public Farmer(String name, int age, String gender, Set<Problem> problems, FarmDetails farmDetails) {
         this.name = name;

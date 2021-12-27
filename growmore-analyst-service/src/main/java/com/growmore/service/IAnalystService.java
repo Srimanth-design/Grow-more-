@@ -18,7 +18,7 @@ public interface IAnalystService {
 
     List<Analyst> getByGender(String gender) throws AnalystNotFoundException;
 
-    List<Analyst> getByAgeLessThan(int age) throws AnalystNotFoundException;
+    List<Analyst> getByExperience(int experience) throws AnalystNotFoundException;
 
     Analyst getById(int analystId) throws AnalystNotFoundException;
 

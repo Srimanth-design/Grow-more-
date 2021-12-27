@@ -1,0 +1,84 @@
+2021-12-27 10:40:34.291  INFO 15924 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.13 on SahabJaiswal with PID 15924 (C:\Users\SahabJaiswal\Training\intellijdemosnew\growmore\grow-more-\growmore-problem-service\target\classes started by SahabJaiswal in C:\Users\SahabJaiswal\Training\intellijdemosnew\growmore\grow-more-)
+2021-12-27 10:40:34.291 DEBUG 15924 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-27 10:40:34.291  INFO 15924 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-27 10:40:34.354  INFO 15924 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-27 10:40:34.369  INFO 15924 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-27 10:40:34.369  INFO 15924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-27 10:40:34.369  INFO 15924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-27 10:40:35.713  INFO 15924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-27 10:40:35.900  INFO 15924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 1 JPA repository interfaces.
+2021-12-27 10:40:36.275  INFO 15924 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-27 10:40:37.270  INFO 15924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-27 10:40:37.457  INFO 15924 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3088 ms
+2021-12-27 10:40:37.598  WARN 15924 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-27 10:40:39.976  INFO 15924 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 10:40:40.648  WARN 15924 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-27 10:40:40.710  WARN 15924 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-27 10:40:41.601  WARN 15924 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-27 10:40:41.913  INFO 15924 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-27 10:40:42.054  WARN 15924 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-27 10:40:42.070  INFO 15924 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-27 10:40:42.116  INFO 15924 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-27 10:40:43.022  INFO 15924 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-27 10:40:43.054  INFO 15924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-27 10:40:43.054  INFO 15924 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-27 10:40:43.360  INFO 15924 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 11.019 seconds (JVM running for 12.364)
+2021-12-27 10:40:54.252  INFO 15924 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-27 10:40:54.260  INFO 15924 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-12-27 10:44:17.818  INFO 15924 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-27 10:44:18.099  INFO 15924 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 10:44:27.553  INFO 25092 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.13 on SahabJaiswal with PID 25092 (C:\Users\SahabJaiswal\Training\intellijdemosnew\growmore\grow-more-\growmore-problem-service\target\classes started by SahabJaiswal in C:\Users\SahabJaiswal\Training\intellijdemosnew\growmore\grow-more-)
+2021-12-27 10:44:27.553 DEBUG 25092 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-27 10:44:27.553  INFO 25092 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-27 10:44:27.647  INFO 25092 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-27 10:44:27.647  INFO 25092 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-27 10:44:27.647  INFO 25092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-27 10:44:27.647  INFO 25092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-27 10:44:29.381  INFO 25092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-27 10:44:29.709  INFO 25092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 325 ms. Found 1 JPA repository interfaces.
+2021-12-27 10:44:30.193  INFO 25092 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-27 10:44:31.521  INFO 25092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-27 10:44:31.693  INFO 25092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4046 ms
+2021-12-27 10:44:31.818  WARN 25092 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-27 10:44:34.049  INFO 25092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 10:44:34.658  WARN 25092 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-27 10:44:34.705  WARN 25092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-27 10:44:35.502  WARN 25092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-27 10:44:35.736  INFO 25092 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-27 10:44:35.892  WARN 25092 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-27 10:44:35.908  INFO 25092 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-27 10:44:35.955  INFO 25092 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-27 10:44:36.876  INFO 25092 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-27 10:44:36.908  INFO 25092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-27 10:44:36.908  INFO 25092 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-27 10:44:37.189  INFO 25092 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 11.9 seconds (JVM running for 13.321)
+2021-12-27 10:51:36.809  INFO 25092 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-27 10:51:36.965  INFO 25092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 10:51:40.006  WARN 25092 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2021-12-27 10:51:45.226  INFO 23752 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.13 on SahabJaiswal with PID 23752 (C:\Users\SahabJaiswal\Training\intellijdemosnew\growmore\grow-more-\growmore-problem-service\target\classes started by SahabJaiswal in C:\Users\SahabJaiswal\Training\intellijdemosnew\growmore\grow-more-)
+2021-12-27 10:51:45.226 DEBUG 23752 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-27 10:51:45.226  INFO 23752 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-27 10:51:45.319  INFO 23752 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-27 10:51:45.319  INFO 23752 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-27 10:51:45.335  INFO 23752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-27 10:51:45.335  INFO 23752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-27 10:51:46.650  INFO 23752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-27 10:51:46.822  INFO 23752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157 ms. Found 1 JPA repository interfaces.
+2021-12-27 10:51:47.212  INFO 23752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-27 10:51:48.216  INFO 23752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-27 10:51:48.372  INFO 23752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3037 ms
+2021-12-27 10:51:48.544  WARN 23752 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-27 10:51:50.756  INFO 23752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 10:51:51.397  WARN 23752 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-27 10:51:51.459  WARN 23752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-27 10:51:52.303  WARN 23752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-27 10:51:52.553  INFO 23752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-27 10:51:52.725  WARN 23752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-27 10:51:52.725  INFO 23752 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-27 10:51:52.818  INFO 23752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-27 10:51:54.099  INFO 23752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-27 10:51:54.131  INFO 23752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-27 10:51:54.131  INFO 23752 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-27 10:51:54.421  INFO 23752 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 11.231 seconds (JVM running for 12.35)
+2021-12-27 12:04:27.735  INFO 23752 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-27 12:04:27.741  INFO 23752 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms

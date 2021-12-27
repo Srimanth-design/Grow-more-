@@ -13,7 +13,8 @@ public interface IAnalystRepository extends JpaRepository<Analyst,Integer> {
 
     List<Analyst> getByGender(String gender) throws AnalystNotFoundException;
 
-    List<Analyst> getByAgeLessThan(int age) throws AnalystNotFoundException;
+    @Query("from Analyst where experience>?1")
+    List<Analyst> getByExperience(int experience) throws AnalystNotFoundException;
 
     @Query("from Analyst where degree like '%?1%' and experience>?2")
     List<Analyst> getByDegreeAndExperience(String degree, int experience) throws AnalystNotFoundException;

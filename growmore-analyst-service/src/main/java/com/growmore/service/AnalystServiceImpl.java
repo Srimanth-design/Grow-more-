@@ -44,13 +44,14 @@ public class AnalystServiceImpl implements IAnalystService {
     }
 
     @Override
-    public List<Analyst> getByAgeLessThan(int age) throws AnalystNotFoundException {
-        List<Analyst> analysts = analystRepository.getByAgeLessThan(age);
-        if (analysts.isEmpty()) {
-            throw new AnalystNotFoundException("Age Not Found");
+    public List<Analyst> getByExperience(int experience) throws AnalystNotFoundException {
+        List<Analyst> analysts = analystRepository.getByExperience(experience);
+        if (analysts.isEmpty()){
+            throw new AnalystNotFoundException("Such experienced are not available");
         }
         return analysts;
     }
+
 
     @Override
     public Analyst getById(int analystId) throws AnalystNotFoundException {
