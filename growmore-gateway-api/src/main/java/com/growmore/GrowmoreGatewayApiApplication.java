@@ -22,6 +22,8 @@ public class GrowmoreGatewayApiApplication {
 						.uri("lb://FARMER-SERVICE"))
 				.route("problemService", r -> r.path("/problem-api/**")
 						.uri("lb://PROBLEM-SERVICE"))
+				.route("analystService",r->r.path("/analyst-api/**")
+						.uri("lb://ANALYST-SERVICE"))
 				.build();
 
 

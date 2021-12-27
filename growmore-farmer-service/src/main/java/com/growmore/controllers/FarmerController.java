@@ -137,6 +137,9 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
+
+
+
     /**
      *
      * @param city
@@ -209,6 +212,17 @@ public class FarmerController {
         headers.add("desc", "showing all farmer problems  ");
         return ResponseEntity.ok().headers(headers).body(problems);
     }
+
+    @GetMapping("/farmers/problems/problemId/{problemId}")
+    ResponseEntity<Problem> getProById(@PathVariable("problemId") int problemId) throws FarmerNotFoundException{
+        logger.debug("Getting by Id from farmer service");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "farmer Id");
+        Problem problem = problemFeign.getProById(problemId);
+        logger.info("Getting by Id from farmer service:" + problem);
+        return ResponseEntity.accepted().headers(headers).body(problem);
+    }
+
 
     /**
      *

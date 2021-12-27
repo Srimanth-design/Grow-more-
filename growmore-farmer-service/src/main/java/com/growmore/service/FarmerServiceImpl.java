@@ -14,12 +14,13 @@ import java.util.List;
 @Service
 public class FarmerServiceImpl implements IFarmerService, IProblemFeign {
 
-    IFarmerRepository farmerRepository;
-
+ IFarmerRepository farmerRepository;
+//
     @Autowired
     public void setFarmerRepository(IFarmerRepository farmerRepository) {
         this.farmerRepository = farmerRepository;
     }
+
 
     @Autowired
     private IProblemFeign problemFeign;
@@ -28,7 +29,7 @@ public class FarmerServiceImpl implements IFarmerService, IProblemFeign {
     public Farmer addFarmer(Farmer farmer) {
         return farmerRepository.save(farmer);
     }
-
+//
     @Override
     public void updateFarmer(Farmer farmer) {
         farmerRepository.save(farmer);
@@ -102,6 +103,11 @@ public class FarmerServiceImpl implements IFarmerService, IProblemFeign {
     @Override
     public List<Problem> getAllPro() {
         return problemFeign.getAllPro();
+    }
+
+    @Override
+    public Problem getProById(int problemId) throws FarmerNotFoundException {
+        return problemFeign.getProById(problemId);
     }
 
     @Override
