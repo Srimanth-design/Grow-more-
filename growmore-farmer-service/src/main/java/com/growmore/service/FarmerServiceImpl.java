@@ -12,18 +12,18 @@ import java.util.List;
 @Service
 public class FarmerServiceImpl implements IFarmerService {
 
-    IFarmerRepository farmerRepository;
-
+ IFarmerRepository farmerRepository;
+//
     @Autowired
     public void setFarmerRepository(IFarmerRepository farmerRepository) {
         this.farmerRepository = farmerRepository;
     }
-
+//
     @Override
     public Farmer addFarmer(Farmer farmer) {
         return farmerRepository.save(farmer);
     }
-
+//
     @Override
     public void updateFarmer(Farmer farmer) {
         farmerRepository.save(farmer);

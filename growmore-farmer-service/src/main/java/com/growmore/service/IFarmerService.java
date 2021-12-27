@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface IFarmerService {
 
-    Farmer addFarmer(Farmer farmer);
-
+   Farmer addFarmer(Farmer farmer);
+//
     void updateFarmer(Farmer farmer);
 
     void deleteFarmer(int farmerId);

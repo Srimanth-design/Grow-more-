@@ -18,7 +18,7 @@ public class Farmer {
     @Id
     @Column(name = "farmerid")
     @GeneratedValue(generator = "farmer_seq", strategy = GenerationType.AUTO)
-    @SequenceGenerator(name = "farmer_seq", sequenceName = "farmer_sequence", allocationSize = 1, initialValue = 1)
+    @SequenceGenerator(name = "farmer_seq", sequenceName = "farmerSequence", allocationSize = 1, initialValue = 1)
     private Integer farmerId;
     @Column(length = 20)
     private String name;
