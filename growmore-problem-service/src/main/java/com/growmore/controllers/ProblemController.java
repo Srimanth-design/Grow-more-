@@ -1,10 +1,7 @@
 package com.growmore.controllers;
 
 import com.growmore.exception.ProblemNotFoundException;
-import com.growmore.model.Farmer;
-import com.growmore.model.Fertilizers;
-import com.growmore.model.Intensity;
-import com.growmore.model.Problem;
+import com.growmore.model.*;
 import com.growmore.service.IProblemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +20,8 @@ public class ProblemController {
     private Logger logger = LoggerFactory.getLogger(ProblemController.class);
 
     IProblemService problemService;
+
+
 
     /**
      * @param problemService
@@ -188,6 +187,28 @@ public class ProblemController {
         logger.info("Got problems alternative solutions given by analyst :" + problems);
         return ResponseEntity.ok().headers(headers).body(problems);
 
+    }
+
+
+
+    @GetMapping("/problems/id/{id}")
+    ResponseEntity<Problem> getAnalystById(@PathVariable("id") int id) {
+        logger.debug("Got analyst suggested alternatives..");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting by analyst suggested alternative");
+        Problem problem = problemService.getAnalystById(id);
+        logger.info("Got problems alternative solutions given by analyst :" + problem);
+        return ResponseEntity.ok().headers(headers).body(problem);
+    }
+
+    @GetMapping("/problems/farmerId/{farmerId}")
+    ResponseEntity<List<Problem>> getProDetById(@PathVariable("farmerId") int farmerId) throws ProblemNotFoundException{
+        logger.debug("Got problem details ..");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting problem details");
+        List<Problem> problems = problemService.getProDetById(farmerId);
+        logger.info("Got problem details:" + problems);
+        return ResponseEntity.ok().headers(headers).body(problems);
     }
 
 }

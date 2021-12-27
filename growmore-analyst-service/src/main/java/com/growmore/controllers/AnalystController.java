@@ -1,7 +1,9 @@
 package com.growmore.controllers;
 
 import com.growmore.exceptions.AnalystNotFoundException;
+import com.growmore.feign.IProblemFeign;
 import com.growmore.model.Analyst;
+import com.growmore.model.Problem;
 import com.growmore.service.IAnalystService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +29,8 @@ public class AnalystController {
         this.analystService = analystService;
     }
 
+    @Autowired
+    IProblemFeign problemFeign;
     /**
      * @param analyst
      * @return
@@ -37,7 +41,6 @@ public class AnalystController {
         Analyst addAnalyst = analystService.addAnalyst(analyst);
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "New Analyst Added");
-
         return ResponseEntity.accepted().headers(headers).body(addAnalyst);
     }
 
@@ -87,7 +90,7 @@ public class AnalystController {
     }
 
     /**
-     * @param age
+     * @param experience
      * @return
      * @throws AnalystNotFoundException
      * @descrption getting analyst by giving age input
@@ -164,6 +167,38 @@ public class AnalystController {
         logger.info("Got the analyst details by rating input  :" + analysts);
         return ResponseEntity.ok().headers(headers).body(analysts);
     }
+
+    /**
+     * --------------------- FEIGN CLIENT -----------------------------------
+     */
+
+    @GetMapping("/analysts/id/{id}")
+    ResponseEntity<Problem> getAnalystById(@PathVariable("id") int id){
+        logger.debug("Get problem details by analyst input from analyst service");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting problem and solution details by analyst input....");
+        Problem problem = problemFeign.getAnalystById(id);
+        logger.info("Got solution given by analyst: " + problem);
+        return ResponseEntity.ok().headers(headers).body(problem);
+    }
+
+    @GetMapping("/analysts/problems")
+    List<Problem> getAllProblems(){
+        return problemFeign.getAllProblems();
+    }
+
+    @GetMapping("/analysts/problems/intensity/{intensity}")
+    ResponseEntity<List<Problem>> getProWithIntensity(@PathVariable("intensity") String intensity){
+        logger.debug("Get problem details having intensity from analyst service");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting problem details with intensity...");
+        List<Problem> problems = problemFeign.getProWithIntensity(intensity);
+        logger.info("Got problem details having intensity: " + problems);
+        return ResponseEntity.ok().headers(headers).body(problems);
+    }
+
+
+
 }
 
 

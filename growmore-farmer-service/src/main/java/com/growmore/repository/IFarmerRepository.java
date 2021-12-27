@@ -27,5 +27,4 @@ public interface IFarmerRepository extends JpaRepository<Farmer, Integer> {
     List<Farmer> getBySoilCity(String soil, String city) throws FarmerNotFoundException;
 
 
-
 }

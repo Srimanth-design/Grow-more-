@@ -2,6 +2,7 @@ package com.growmore.service;
 
 
 import com.growmore.exception.ProblemNotFoundException;
+import com.growmore.model.Analyst;
 import com.growmore.model.Fertilizers;
 import com.growmore.model.Intensity;
 import com.growmore.model.Problem;
@@ -30,4 +31,7 @@ public interface IProblemService {
 
     List<Problem> getByAlternatives(String alternative, String alternative2) throws ProblemNotFoundException;
 
+    Problem getAnalystById(int analystId) throws ProblemNotFoundException;
+
+    List<Problem> getProDetById(int farmerId) throws ProblemNotFoundException;
 }

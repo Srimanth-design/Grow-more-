@@ -9,8 +9,6 @@ import java.util.Set;
 
 @NoArgsConstructor
 @ToString
-@Getter
-@Setter
 @Entity
 public class Farmer {
 
@@ -48,5 +46,43 @@ public class Farmer {
         this.farmDetails = farmDetails;
     }
 
+    public Integer getFarmerId() {
+        return farmerId;
+    }
 
+    public void setFarmerId(Integer farmerId) {
+        this.farmerId = farmerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public FarmDetails getFarmDetails() {
+        return farmDetails;
+    }
+
+    public void setFarmDetails(FarmDetails farmDetails) {
+        this.farmDetails = farmDetails;
+    }
 }

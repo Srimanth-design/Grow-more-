@@ -1,6 +1,7 @@
 package com.growmore.service;
 
 import com.growmore.exception.ProblemNotFoundException;
+import com.growmore.model.Analyst;
 import com.growmore.model.Fertilizers;
 import com.growmore.model.Intensity;
 import com.growmore.model.Problem;
@@ -84,10 +85,22 @@ public class ProblemServiceImpl implements IProblemService {
 
     @Override
     public List<Problem> getByAlternatives(String alternative, String alternative2) throws ProblemNotFoundException {
-        List<Problem> problems = problemRepository.getByAlternatives(alternative,alternative2);
+        List<Problem> problems = problemRepository.getByAlternatives(alternative, alternative2);
         if (problems.isEmpty()) {
             throw new ProblemNotFoundException("No match exists");
         }
         return problems;
     }
+
+    @Override
+    public Problem getAnalystById(int analystId) throws ProblemNotFoundException {
+        return problemRepository.getAnalystById(analystId);
+    }
+
+    @Override
+    public List<Problem> getProDetById(int farmerId) throws ProblemNotFoundException {
+        return problemRepository.getProDetById(farmerId);
+    }
+
+
 }

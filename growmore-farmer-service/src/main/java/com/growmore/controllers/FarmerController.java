@@ -1,4 +1,5 @@
 package com.growmore.controllers;
+
 import com.growmore.exception.FarmerNotFoundException;
 import com.growmore.feign.IProblemFeign;
 import com.growmore.model.Farmer;
@@ -25,7 +26,6 @@ public class FarmerController {
     IProblemFeign problemFeign;
 
     /**
-     *
      * @param farmerService
      * @description setter based dependency
      */
@@ -46,7 +46,6 @@ public class FarmerController {
         headers.add("desc", "New farmer addded");
         return ResponseEntity.accepted().headers(headers).body(addFarmer);
     }
-
 
 
     /**
@@ -123,10 +122,8 @@ public class FarmerController {
     }
 
     /**
-     *
      * @return
      * @description Getting all farmers listed
-     *
      */
 
     @GetMapping("/farmers")
@@ -138,19 +135,15 @@ public class FarmerController {
     }
 
 
-
-
     /**
-     *
      * @param city
      * @return
      * @throws FarmerNotFoundException
      * @description Getting farmer details from the city
-     *
      */
 
     @GetMapping("/farmers/city/{city}")
-    ResponseEntity<List<Farmer>> getByCity(@PathVariable("city") String city) throws FarmerNotFoundException{
+    ResponseEntity<List<Farmer>> getByCity(@PathVariable("city") String city) throws FarmerNotFoundException {
         logger.debug("Get farmer by city inputs:");
         HttpHeaders headers = new HttpHeaders();
         headers.add("desc", "getting by city inputs");
@@ -194,70 +187,46 @@ public class FarmerController {
         return ResponseEntity.ok().headers(headers).body(farmers);
     }
 
-    /**
-     * ----------- Using feign Client ----------
-     */
 
     /**
-     *
-     * @return
-     * @description checking all problems from the farmer service
-     *
+     * ---------------------------------------- FEIGN CLIENT -----------------------------------------------------
      */
+
+
+    @PostMapping("/farmers/problems")
+    ResponseEntity<Problem> addProblem(@RequestBody Problem problem) {
+        logger.debug("Adding problem from farmer service:");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "adding problem from farmer service");
+        Problem problem1 = problemFeign.addProblem(problem);
+        logger.info("Adding problem from farmer service" + problem1);
+        return ResponseEntity.ok().headers(headers).body(problem1);
+    }
+
+    @PutMapping("/farmers/problems")
+    ResponseEntity<Void> updateProblem(@RequestBody Problem problem) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "updating..");
+        problemFeign.updateProblem(problem);
+        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).build();
+    }
+
+    @DeleteMapping("/farmers/problems/problemId/{problemId}")
+    ResponseEntity<Void> deleteProblem(@PathVariable("problemId") int problemId) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "deleting..");
+        problemFeign.deleteProblem(problemId);
+        return ResponseEntity.ok().headers(headers).build();
+    }
 
     @GetMapping("/farmers/problems")
-    ResponseEntity<List<Problem>> getAllPro(){
-        List<Problem> problems = problemFeign.getAllPro();
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("desc", "showing all farmer problems  ");
-        return ResponseEntity.ok().headers(headers).body(problems);
+    List<Problem> getAllProblems() {
+        return problemFeign.getAllProblems();
     }
 
-    @GetMapping("/farmers/problems/problemId/{problemId}")
-    ResponseEntity<Problem> getProById(@PathVariable("problemId") int problemId) throws FarmerNotFoundException{
-        logger.debug("Getting by Id from farmer service");
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("desc", "farmer Id");
-        Problem problem = problemFeign.getProById(problemId);
-        logger.info("Getting by Id from farmer service:" + problem);
-        return ResponseEntity.accepted().headers(headers).body(problem);
-    }
-
-
-    /**
-     *
-     * @param intensity
-     * @return
-     * @throws FarmerNotFoundException
-     * @description checking problem intensity from the farmer service
-     *
-     */
-    @GetMapping("farmers/problems/intensity/{intensity}")
-    ResponseEntity<List<Problem>> getByIntensity(@PathVariable("intensity") String intensity) throws FarmerNotFoundException{
-        logger.debug("Get farmer details by problem intensity details:");
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("desc", "from farmer service to problem inputs");
-        List<Problem> farmers = problemFeign.getByIntensity(intensity);
-        logger.info("Got farmer details by problem intensity :" + farmers);
-        return ResponseEntity.ok().headers(headers).body(farmers);
-    }
-
-    /**
-     *
-     * @param fertilizer
-     * @return
-     * @throws FarmerNotFoundException
-     * @description checking farmer used fertilizer from the farmer service
-     */
-
-    @GetMapping("farmers/problems/fertilizer/{fertilizer}")
-    ResponseEntity<List<Problem>> getByFertilizer(@PathVariable("fertilizer") String fertilizer) throws FarmerNotFoundException{
-        logger.debug("Get farmer details by fertilizers they used:");
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("desc", "from farmer service to problem inputs");
-        List<Problem> farmers = problemFeign.getByFertilizer(fertilizer);
-        logger.info("Got farmer details by fertilizers they used :" + farmers);
-        return ResponseEntity.ok().headers(headers).body(farmers);
+    @GetMapping("/farmers/problems/farmerId/{farmerId}")
+    List<Problem> getProById(@PathVariable("farmerId") int farmerId){
+        return problemFeign.getProDetById(farmerId);
     }
 
 }
