@@ -28,7 +28,7 @@ public class Solution {
     private String description;
     private  String alternative;
 
-    @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "solutions")
+    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "solutions")
     @JsonIgnore
     private Set<Problem> problems;
 

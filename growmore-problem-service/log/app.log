@@ -209,3 +209,58 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:106) ~[spring-boot-2.5.8.jar:2.5.8]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
+2021-12-26 21:15:08.732  INFO 10632 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 10632 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 21:15:08.732 DEBUG 10632 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 21:15:08.732  INFO 10632 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-26 21:15:08.920  INFO 10632 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 21:15:08.920  INFO 10632 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-26 21:15:08.920  INFO 10632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 21:15:08.935  INFO 10632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 21:15:12.868  INFO 10632 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 21:15:13.259  INFO 10632 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 350 ms. Found 1 JPA repository interfaces.
+2021-12-26 21:15:14.571  INFO 10632 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-26 21:15:17.141  INFO 10632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-26 21:15:17.516  INFO 10632 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8581 ms
+2021-12-26 21:15:17.704  WARN 10632 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 21:15:25.291  INFO 10632 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 21:15:26.820  WARN 10632 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 21:15:27.882  WARN 10632 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 21:15:32.282  WARN 10632 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-26 21:15:32.789  INFO 10632 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 21:15:33.554  WARN 10632 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 21:15:33.570  INFO 10632 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 21:15:33.695  INFO 10632 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 21:15:35.062  INFO 10632 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-26 21:15:35.125  INFO 10632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-26 21:15:35.125  INFO 10632 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-26 21:15:35.437  INFO 10632 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 31.183 seconds (JVM running for 33.872)
+2021-12-26 21:18:22.955  INFO 10632 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROBLEM-SERVICE with eureka with status DOWN
+2021-12-26 21:18:23.189  INFO 10632 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 21:18:36.697  INFO 9220 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Starting GrowmoreProblemServiceApplication using Java 11.0.12 on Srimanth with PID 9220 (C:\Users\SrimanthChinta\training\Spring\GrowMore\growmore-problem-service\target\classes started by SrimanthChinta in C:\Users\SrimanthChinta\training\Spring\GrowMore)
+2021-12-26 21:18:36.699 DEBUG 9220 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Running with Spring Boot v2.5.8, Spring v5.3.14
+2021-12-26 21:18:36.702  INFO 9220 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : No active profile set, falling back to default profiles: default
+2021-12-26 21:18:36.847  INFO 9220 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888/
+2021-12-26 21:18:36.848  INFO 9220 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=PROBLEM-SERVICE, profiles=[default], label=null, version=560fa856db4f6ac7d6176782ebc64443202c7262, state=null
+2021-12-26 21:18:36.850  INFO 9220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 21:18:36.850  INFO 9220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 21:18:38.388  INFO 9220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 21:18:38.773  INFO 9220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 367 ms. Found 1 JPA repository interfaces.
+2021-12-26 21:18:39.261  INFO 9220 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ce78947c-1143-3c91-9815-a464ae4a9fcb
+2021-12-26 21:18:40.571  INFO 9220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-12-26 21:18:40.787  INFO 9220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3936 ms
+2021-12-26 21:18:40.926  WARN 9220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 21:18:44.751  INFO 9220 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 21:18:45.835  WARN 9220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-12-26 21:18:45.951  WARN 9220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 21:18:47.362  WARN 9220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-26 21:18:47.870  INFO 9220 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-26 21:18:48.155  WARN 9220 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-26 21:18:48.181  INFO 9220 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-12-26 21:18:48.262  INFO 9220 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-26 21:18:49.707  INFO 9220 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROBLEM-SERVICE with eureka with status UP
+2021-12-26 21:18:49.754  INFO 9220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-12-26 21:18:49.754  INFO 9220 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2021-12-26 21:18:50.321  INFO 9220 --- [restartedMain] c.g.GrowmoreProblemServiceApplication    : Started GrowmoreProblemServiceApplication in 16.249 seconds (JVM running for 18.322)
+2021-12-26 21:20:56.976  INFO 9220 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 21:20:56.979  INFO 9220 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-26 22:37:25.757  WARN 9220 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m12s637ms879µs800ns).
