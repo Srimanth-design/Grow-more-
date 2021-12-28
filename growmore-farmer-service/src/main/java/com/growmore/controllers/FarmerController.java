@@ -220,13 +220,21 @@ public class FarmerController {
     }
 
     @GetMapping("/farmers/problems")
-    List<Problem> getAllProblems() {
-        return problemFeign.getAllProblems();
+    ResponseEntity<List<Problem>> getAllProblems() {
+        List<Problem> problems = problemFeign.getAllProblems();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "showing all problems from framer service ");
+        return ResponseEntity.ok().headers(headers).body(problems);
     }
 
     @GetMapping("/farmers/problems/farmerId/{farmerId}")
-    List<Problem> getProById(@PathVariable("farmerId") int farmerId){
-        return problemFeign.getProDetById(farmerId);
+    ResponseEntity<List<Problem>> getProById(@PathVariable("farmerId") int farmerId){
+        logger.debug("Getting problems by farmer Id.. using method");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "from farmer service calling problems");
+        List<Problem> problems = problemFeign.getProDetById(farmerId);
+        logger.info("Got problem details by farmer Id:" + problems);
+        return ResponseEntity.accepted().headers(headers).body(problems);
     }
 
 }

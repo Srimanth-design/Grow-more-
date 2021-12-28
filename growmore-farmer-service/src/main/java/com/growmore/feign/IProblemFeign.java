@@ -15,14 +15,14 @@ public interface IProblemFeign {
     @GetMapping("/problems/farmerId/{farmerId}")
     List<Problem> getProDetById(@PathVariable("farmerId") int farmerId);
 
-//    @PostMapping("/problems")
-//    Problem addProblem(@RequestBody Problem problem);
-//
-//    @PutMapping("/problems")
-//    void updateProblem(@RequestBody Problem problem);
-//
-//    @DeleteMapping("/problems/problemId/{problemId}")
-//    void deleteProblem(@PathVariable("problemId") int problemId);
+    @PostMapping("/problems")
+    Problem addProblem(@RequestBody Problem problem);
+
+    @PutMapping("/problems")
+    void updateProblem(@RequestBody Problem problem);
+
+    @DeleteMapping("/problems/problemId/{problemId}")
+    void deleteProblem(@PathVariable("problemId") int problemId);
 
     @GetMapping("/problems")
     List<Problem> getAllProblems();

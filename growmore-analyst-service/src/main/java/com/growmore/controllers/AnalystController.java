@@ -183,8 +183,11 @@ public class AnalystController {
     }
 
     @GetMapping("/analysts/problems")
-    List<Problem> getAllProblems(){
-        return problemFeign.getAllProblems();
+    ResponseEntity<List<Problem>> getAllProblems(){
+        List<Problem> problems = problemFeign.getAllProblems();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("desc", "getting all problems from analyst service ....");
+        return ResponseEntity.ok().headers(headers).body(problems);
     }
 
     @GetMapping("/analysts/problems/intensity/{intensity}")
@@ -196,8 +199,6 @@ public class AnalystController {
         logger.info("Got problem details having intensity: " + problems);
         return ResponseEntity.ok().headers(headers).body(problems);
     }
-
-
 
 }
 
